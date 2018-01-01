@@ -52,4 +52,10 @@ public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler
         connected = false;
         sock.close();
     }
+
+	@Override
+	public void send(T msg) {
+		// TODO Auto-generated method stub
+		
+	}
 }

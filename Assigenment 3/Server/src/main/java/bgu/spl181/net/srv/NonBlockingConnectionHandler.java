@@ -116,4 +116,10 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
         BUFFER_POOL.add(buff);
     }
 
+	@Override
+	public void send(T msg) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

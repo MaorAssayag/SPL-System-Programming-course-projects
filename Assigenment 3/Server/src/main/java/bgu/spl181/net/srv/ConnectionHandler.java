@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bgu.spl181.net.srv.bidi;
+package bgu.spl181.net.srv;
 
 import java.io.Closeable;
 import java.io.IOException;
