@@ -1,0 +1,3 @@
+/cygdrive/c/Users/MaorA/Desktop/spl/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/MaorA/Desktop/spl/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/MaorA/Desktop/spl/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles/Client.dir
