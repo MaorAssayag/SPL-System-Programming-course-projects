@@ -6,10 +6,14 @@ import bgu.spl181.net.srv.ConnectionHandler;
 
 public class ConnectionsImpl <T> implements Connections<T> {
 	
-	private HashMap<String, ConnectionHandler<T>> activeClients;
-	
-	
-    @Override
+	private HashMap<Integer, ConnectionHandler<T>> activeClients = new HashMap<Integer, ConnectionHandler<T>>();
+
+	public void UpdateConnections(int connectionId ,ConnectionHandler<T> connectionHandler ){
+	    if(!activeClients.containsKey(connectionId))
+	        activeClients.put(connectionId,connectionHandler);
+    }
+
+	@Override
     public boolean send(int connectionId, T msg) {
         return false;
     }
