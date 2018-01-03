@@ -17,14 +17,14 @@ public class ConnectionsImpl <T> implements Connections<T> {
 
 	@Override
     public boolean send(int connectionId, T msg) {
-		if (!this.activeClients.containsKey(connectionId))
-			return false;
+		if (!this.activeClients.containsKey(connectionId)) 
+			return false; // this client id doesnt exist
 		try {
 			this.activeClients.get(connectionId).send(msg);
-			return true;
+			return true; // the msg was send successfully 
 		} 
 		catch (Exception e) {
-			return false;
+			return false; // the msg wasn't sent
 		}
     }
 
@@ -38,7 +38,7 @@ public class ConnectionsImpl <T> implements Connections<T> {
     @Override
     public void disconnect(int connectionId) {
     	if(this.activeClients.containsKey(connectionId)) {
-    		this.activeClients.remove(connectionId);
+    		this.activeClients.remove(connectionId); // remove this client from the hash map
     	}
     } 
  
