@@ -1,7 +1,6 @@
 package bgu.spl181.net.srv;
 
 import bgu.spl181.net.api.MessageEncoderDecoder;
-import bgu.spl181.net.api.MessagingProtocol;
 import bgu.spl181.net.api.bidi.BidiMessagingProtocol;
 
 import java.io.IOException;
@@ -116,6 +115,9 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
         BUFFER_POOL.add(buff);
     }
 
+    public BidiMessagingProtocol<T> getProtocol(){
+        return protocol;
+    }
 	@Override
 	public void send(T msg) {
 		// TODO Auto-generated method stub
