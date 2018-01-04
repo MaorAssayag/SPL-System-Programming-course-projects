@@ -7,6 +7,9 @@ public class BidiMessagingProtocolimpl<T> implements BidiMessagingProtocol<T> {
     private int connectionId;
     private Connections<T> connections;
     boolean shouldTerminate;
+
+
+
     @Override
     public void start(int connectionId, Connections<T> connections) {
         this.connectionId = connectionId;
