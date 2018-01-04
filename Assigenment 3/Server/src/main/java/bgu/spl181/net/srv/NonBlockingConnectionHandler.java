@@ -47,8 +47,8 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
                 try {
                     while (buf.hasRemaining()) {
                         T nextMessagePrep = encdec.decodeNextByte(buf.get());
-                        T nextMessage = (T) encdec.stringToArray(nextMessagePrep);
-                        if (nextMessage != null) {
+                        if (nextMessagePrep != null) {
+                        	T nextMessage = (T) encdec.stringToArray(nextMessagePrep);
                             T response = protocol.process(nextMessage);
 //                            if (response != null) {
 //                                writeQueue.add(ByteBuffer.wrap(encdec.encode(response)));
@@ -119,6 +119,7 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
     public BidiMessagingProtocol<T> getProtocol(){
         return protocol;
     }
+    
 	@Override
 	public void send(T msg) {
         writeQueue.add(ByteBuffer.wrap(encdec.encode(msg)));
