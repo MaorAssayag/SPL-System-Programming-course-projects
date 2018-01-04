@@ -1,8 +1,9 @@
-package bgu.spl181.net.impl.echo;
+package bgu.spl181.net.impl.Blockbuster;
 
-import bgu.spl181.net.api.MessageEncoderDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+
+import bgu.spl181.net.api.bidi.MessageEncoderDecoder;
 
 public class LineMessageEncoderDecoder implements MessageEncoderDecoder<String> {
 
@@ -41,4 +42,9 @@ public class LineMessageEncoderDecoder implements MessageEncoderDecoder<String> 
         len = 0;
         return result;
     }
+
+	public String[] stringToArray(String msg) {
+		String[] result = msg.split(" ");		
+		return result;
+	}
 }

@@ -1,4 +1,4 @@
-package bgu.spl181.net.api;
+package bgu.spl181.net.api.bidi;
 
 public interface MessageEncoderDecoder<T> {
 
@@ -18,5 +18,11 @@ public interface MessageEncoderDecoder<T> {
      * @return the encoded bytes
      */
     byte[] encode(T message);
-
+    
+    /**
+     * encode the given message to string array for feature process.
+     * @param nextMessagePrep
+     * @return array of string that represent the command requested by the client
+     */
+    T[] stringToArray(T nextMessagePrep);
 }

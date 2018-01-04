@@ -1,6 +1,5 @@
 package bgu.spl181.net.impl.rci;
 
-import bgu.spl181.net.api.MessageEncoderDecoder;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInput;
@@ -9,6 +8,8 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.nio.ByteBuffer;
+
+import bgu.spl181.net.api.bidi.MessageEncoderDecoder;
 
 public class ObjectEncoderDecoder implements MessageEncoderDecoder<Serializable> {
 
@@ -75,5 +76,11 @@ public class ObjectEncoderDecoder implements MessageEncoderDecoder<Serializable>
             throw new IllegalArgumentException("cannot serialize object", ex);
         }
     }
+
+	@Override
+	public Serializable[] stringToArray(Serializable nextMessagePrep) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

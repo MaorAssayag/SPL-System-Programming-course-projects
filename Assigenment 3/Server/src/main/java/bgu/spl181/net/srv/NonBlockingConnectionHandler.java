@@ -1,7 +1,7 @@
 package bgu.spl181.net.srv;
 
-import bgu.spl181.net.api.MessageEncoderDecoder;
 import bgu.spl181.net.api.bidi.BidiMessagingProtocol;
+import bgu.spl181.net.api.bidi.MessageEncoderDecoder;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -46,7 +46,8 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
             return () -> {
                 try {
                     while (buf.hasRemaining()) {
-                        T nextMessage = encdec.decodeNextByte(buf.get());
+                        T nextMessagePrep = encdec.decodeNextByte(buf.get());
+                        T nextMessage = (T) encdec.stringToArray(nextMessagePrep);
                         if (nextMessage != null) {
                             T response = protocol.process(nextMessage);
 //                            if (response != null) {
