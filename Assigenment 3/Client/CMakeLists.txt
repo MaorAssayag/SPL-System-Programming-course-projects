@@ -8,4 +8,6 @@ set(SOURCE_FILES
         src/ConnectionHandler.cpp
         src/echoClient.cpp)
 
-add_executable(Client ${SOURCE_FILES})
+add_executable(Client ${SOURCE_FILES}
+        src
+        include)
