@@ -86,7 +86,16 @@
 		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/include/ConnectionHandler.h">
 			<Option target="Client"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/include/KeyboardThreade.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/include/SocketThread.h">
+			<Option target="Client"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/BBclient.cpp">
 			<Option target="Client"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/ConnectionHandler.cpp">

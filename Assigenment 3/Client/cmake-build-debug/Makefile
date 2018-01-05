@@ -123,6 +123,33 @@ Client/fast:
 	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
 .PHONY : Client/fast
 
+src/BBclient.o: src/BBclient.cpp.o
+
+.PHONY : src/BBclient.o
+
+# target to build an object file
+src/BBclient.cpp.o:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/BBclient.cpp.o
+.PHONY : src/BBclient.cpp.o
+
+src/BBclient.i: src/BBclient.cpp.i
+
+.PHONY : src/BBclient.i
+
+# target to preprocess a source file
+src/BBclient.cpp.i:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/BBclient.cpp.i
+.PHONY : src/BBclient.cpp.i
+
+src/BBclient.s: src/BBclient.cpp.s
+
+.PHONY : src/BBclient.s
+
+# target to generate assembly for a file
+src/BBclient.cpp.s:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/BBclient.cpp.s
+.PHONY : src/BBclient.cpp.s
+
 src/ConnectionHandler.o: src/ConnectionHandler.cpp.o
 
 .PHONY : src/ConnectionHandler.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Client"
+	@echo "... src/BBclient.o"
+	@echo "... src/BBclient.i"
+	@echo "... src/BBclient.s"
 	@echo "... src/ConnectionHandler.o"
 	@echo "... src/ConnectionHandler.i"
 	@echo "... src/ConnectionHandler.s"
