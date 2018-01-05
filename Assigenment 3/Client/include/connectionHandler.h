@@ -12,10 +12,11 @@ private:
 	const std::string host_;
 	const short port_;
 	boost::asio::io_service io_service_;   // Provides core I/O functionality
-	tcp::socket socket_; 
+	tcp::socket socket_;
+    boost::mutex * _mutex;  //to lock
  
 public:
-    ConnectionHandler(std::string host, short port);
+    ConnectionHandler(std::string host, short port ,mutex * _mutex);
     virtual ~ConnectionHandler();
  
     // Connect to the remote machine
@@ -47,7 +48,7 @@ public:
 	
     // Close down the connection properly.
     void close();
- 
+
 }; //class ConnectionHandler
  
 #endif
