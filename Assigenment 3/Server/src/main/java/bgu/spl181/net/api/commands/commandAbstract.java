@@ -1,5 +1,6 @@
 package bgu.spl181.net.api.commands;
 
+
 /**
  * 
  * this interface describe the Command object.
@@ -16,7 +17,7 @@ public abstract class commandAbstract {
 	protected String OptionalMessage;
 	protected String MandatoryMessage;
 	protected String commandName;
-		
+
 	/**
 	 * 
 	 * @return the complete message that sould be sent to the client
