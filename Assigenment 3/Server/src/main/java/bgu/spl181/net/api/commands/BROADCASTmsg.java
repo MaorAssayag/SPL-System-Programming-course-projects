@@ -1,5 +1,7 @@
 package bgu.spl181.net.api.commands;
 
+import bgu.spl181.net.impl.Blockbuster.DataBaseHandler;
+
 /**
  * BROADCASTmsg - The broadcast command is sent by the server to all logged in clients
  * 

@@ -1,1 +1,1 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Client.dir/src/ConnectionHandler.cpp.o CMakeFiles/Client.dir/src/echoClient.cpp.o  -o Client.exe -Wl,--out-implib,libClient.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Client.dir/src/ConnectionHandler.cpp.o CMakeFiles/Client.dir/src/echoClient.cpp.o CMakeFiles/Client.dir/src/BBclient.cpp.o  -o Client.exe -Wl,--out-implib,libClient.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

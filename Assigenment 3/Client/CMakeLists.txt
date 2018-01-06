@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 11)
 set(SOURCE_FILES
         include/ConnectionHandler.h
         src/ConnectionHandler.cpp
-        src/echoClient.cpp)
+        src/echoClient.cpp src/BBclient.cpp include/BBclient.h)
 
-add_executable(Client ${SOURCE_FILES})
+add_executable(Client ${SOURCE_FILES}
+        src
+        include)
