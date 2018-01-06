@@ -25,7 +25,7 @@
       <file leaf-file-name="connectionHandler.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/connectionHandler.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
+            <state relative-caret-position="1829">
               <caret line="92" column="44" lean-forward="true" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
               <folding>
                 <element signature="e#1439#1937#0" expanded="false" />
@@ -52,13 +52,22 @@
       <file leaf-file-name="BBclient.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BBclient.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="81" column="40" lean-forward="true" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
+            <state relative-caret-position="31">
+              <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
               <folding>
-                <element signature="e#49#68#0" expanded="true" />
-                <element signature="e#272#1496#0" expanded="false" />
-                <element signature="e#1630#2169#0" expanded="false" />
+                <element signature="e#281#1505#0" expanded="false" />
+                <element signature="e#1638#2177#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,6 +104,7 @@
         <option value="$PROJECT_DIR$/include/BBclient.h" />
         <option value="$PROJECT_DIR$/include/connectionHandler.h" />
         <option value="$PROJECT_DIR$/src/connectionHandler.cpp" />
+        <option value="$PROJECT_DIR$/makefile" />
         <option value="$PROJECT_DIR$/src/BBclient.cpp" />
       </list>
     </option>
@@ -205,16 +215,15 @@
       <workItem from="1514834455745" duration="2671000" />
       <workItem from="1515153697789" duration="1780000" />
       <workItem from="1515162696140" duration="1231000" />
-      <workItem from="1515163968373" duration="8848000" />
+      <workItem from="1515163968373" duration="10720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14530000" />
+    <option name="totallyTimeSpent" value="16402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1718919" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -377,13 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.CLion2017.2/system/cygwin_cmake/share/cmake-3.8.2/Modules/FindBoost.cmake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -441,19 +443,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/connectionHandler.h">
+    <entry file="file://$PROJECT_DIR$/include/BBclient.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-536">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="e#102#119#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="394">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/connectionHandler.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
+        <state relative-caret-position="1829">
           <caret line="92" column="44" lean-forward="true" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
           <folding>
             <element signature="e#1439#1937#0" expanded="false" />
@@ -464,22 +472,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/BBclient.h">
+    <entry file="file://$PROJECT_DIR$/include/connectionHandler.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="-536">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="e#102#119#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BBclient.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="81" column="40" lean-forward="true" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
+        <state relative-caret-position="31">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
           <folding>
-            <element signature="e#49#68#0" expanded="true" />
-            <element signature="e#272#1496#0" expanded="false" />
-            <element signature="e#1630#2169#0" expanded="false" />
+            <element signature="e#281#1505#0" expanded="false" />
+            <element signature="e#1638#2177#0" expanded="false" />
           </folding>
         </state>
       </provider>

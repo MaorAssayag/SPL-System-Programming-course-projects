@@ -6,9 +6,8 @@ import bgu.spl181.net.api.bidi.Connections;
 public class BidiMessagingProtocolimpl<T> implements BidiMessagingProtocol<T> {
     private int connectionId;
     private Connections<T> connections;
-    boolean shouldTerminate;
-
-
+    private boolean shouldTerminate;
+    private boolean Login;
 
     @Override
     public void start(int connectionId, Connections<T> connections) {

@@ -14,11 +14,17 @@ string
 iostream
 -
 
+/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/include/connectionHandler.h
+string
+-
+iostream
+-
+
 /cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/BBclient.cpp
 stdlib.h
 -
-../include/ConnectionHandler.h
-/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/include/ConnectionHandler.h
+../../Client/include/connectionHandler.h
+/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/include/connectionHandler.h
 ../include/BBclient.h
 /cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/include/BBclient.h
 

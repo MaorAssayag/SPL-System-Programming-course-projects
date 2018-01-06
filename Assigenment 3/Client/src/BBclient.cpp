@@ -2,11 +2,11 @@
 // Created by refael & maor on 05/01/2018.
 //
 #include <stdlib.h>
-#include "../include/ConnectionHandler.h"
+#include "../../Client/include/connectionHandler.h"
 #include "../include/BBclient.h"
 
 
-// Socker read thread
+// Socketread thread
 
 SocketRead::SocketRead(ConnectionHandler connectionHandler):,_connectionHandler(connectionHandler) {};
 void SocketRead::run() {
@@ -37,7 +37,7 @@ void SocketRead::run() {
 }
 
 
-// keyboard read thread
+// keyboardread thread
 
 keyboardRead::keyboardRead( ConnectionHandler connectionHandler):_connectionHandler(connectionHandler) {}
 void keyboardRead::run() {
