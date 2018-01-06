@@ -8,7 +8,7 @@ public class movies {
 
     public movies(){
         movies = new ConcurrentHashMap<String, movie>();
-        Ids = -1;
+        Ids = 0;
     }
     public boolean AddMovie(movie Movie){
         boolean ans = movies.contains(Movie);

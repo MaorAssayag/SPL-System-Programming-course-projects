@@ -6,7 +6,7 @@ public class ClientCommandsAbstract {
     protected DataBaseHandler dataBaseHandler;
     protected boolean Login;
 
-    public abstract String Start(String [] ma)
+//    public abstract String Start(String [] ma)
 
 
 }
