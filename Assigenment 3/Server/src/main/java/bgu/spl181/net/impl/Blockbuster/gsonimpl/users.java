@@ -13,10 +13,10 @@ public class users {
     }
 
     public boolean adduser(user user){
-        boolean ans = usersHash.contains(user.getUsername());
-        if(!ans)
+        boolean exist = usersHash.contains(user.getUsername());
+        if(!exist)
             usersHash.put(user.getUsername(),user);
-        return ans;
+        return !exist;
     }
 
     public void updateusersJson() {//for the update users Hash after Json
@@ -34,5 +34,7 @@ public class users {
         users = ans;
     }
 
-
+    /**
+     * End Of File.
+     */
 }

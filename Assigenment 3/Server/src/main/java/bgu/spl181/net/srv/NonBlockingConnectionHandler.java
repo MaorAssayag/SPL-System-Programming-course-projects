@@ -10,6 +10,17 @@ import java.nio.channels.SocketChannel;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+/**
+ * This class is an implementaion of ConnectionHandler which allow to process 
+ * the client request by a thread from the ThreadPool. 
+ * data members :
+ * 		reactor : the main reactor for changing the socket channel possible income (W/R).
+ * 		protocol : BidiMessagingProtocol for processing the client request via the current implementation of the server.
+ * 		encdec : decode the bytes from the socketChannel.
+ * 		writeQueue : database that contain the server response to the client. 
+ * 		chan : the current socketChannel for this client.
+ * @param <T> - generic implementation, i.e : String, boolean etc'.
+ */
 public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
 
     private static final int BUFFER_ALLOCATION_SIZE = 1 << 13; //8k
@@ -20,6 +31,13 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
     private final SocketChannel chan;
     private final Reactor reactor;
 
+    /**
+     * default constructor.
+     * @param reader
+     * @param protocol
+     * @param chan
+     * @param reactor
+     */
     public NonBlockingConnectionHandler(
             MessageEncoderDecoder<T> reader,
             BidiMessagingProtocol<T> protocol,
@@ -31,6 +49,11 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
         this.reactor = reactor;
     }
 
+    /**
+     * this method generate a callback that will be called by a thread from
+     *  the Threadpool (if the implementation is multi-Thread).
+     * @return callback which will be processing the client request via the protocol implementation.
+     */
     public Runnable continueRead() {
         ByteBuffer buf = leaseBuffer();
 
@@ -126,4 +149,7 @@ public class NonBlockingConnectionHandler<T> implements ConnectionHandler<T> {
         reactor.updateInterestedOps(chan, SelectionKey.OP_READ | SelectionKey.OP_WRITE)	;
 	}
 
+	/**
+	 * End of File.
+	 */
 }
