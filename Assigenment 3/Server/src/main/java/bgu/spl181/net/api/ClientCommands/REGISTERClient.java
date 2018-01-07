@@ -23,7 +23,6 @@ import bgu.spl181.net.impl.Blockbuster.gsonimpl.users;
  *		4. Data block does not fit service requirements (defined in rental service section).
  *
  * In case of successful registration an ACK command will be sent: ACK registration succeeded
- *
  */
 public class REGISTERClient extends ClientCommandsAbstract {
 
@@ -33,7 +32,7 @@ public class REGISTERClient extends ClientCommandsAbstract {
    }
 
    /**
-    * REGISTER <username> <password> [Data block,…] Used to register a new user to the system.
+    * execute REGISTER <username> <password> [Data block,…] - Used to register a new user to the system.
     *		• Username – The user name.
     *		• Password – the password.
     *		• Data Block – An optional block of additional information that may be used by the service.
