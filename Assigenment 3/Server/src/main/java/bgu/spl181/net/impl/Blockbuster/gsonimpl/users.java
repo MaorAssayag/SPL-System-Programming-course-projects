@@ -5,7 +5,7 @@ import com.google.gson.annotations.Since;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * This class represent an array&hashmap of user object's for the json update conversion.
+ * This class represent an array&Hashmap of user object's for the json update conversion.
  * data member :
  * 		users := an array of movie object's.
  * 		usersHash := database for all the active movies that the server contain.
