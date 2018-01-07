@@ -5,7 +5,7 @@ import com.google.gson.annotations.Since;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * This class represent an array&hashmap of movie object's.
+ * This class represent an array&hashmap of movie object's for the json update conversion.
  * data member :
  * 		movies := an array of movie object's.
  * 		Ids := current unique id for a new movie.

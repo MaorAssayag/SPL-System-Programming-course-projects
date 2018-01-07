@@ -1,4 +1,4 @@
-package bgu.spl181.net.api.commands;
+package bgu.spl181.net.api.ServerCommands;
 
 /**
  * ACKmsg - The acknowledge command is sent by the server to reply

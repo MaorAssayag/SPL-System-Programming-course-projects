@@ -1,7 +1,7 @@
 package bgu.spl181.net.api.ClientCommands;
 
-import bgu.spl181.net.api.commands.ACKmsg;
-import bgu.spl181.net.api.commands.ERRORmsg;
+import bgu.spl181.net.api.ServerCommands.ACKmsg;
+import bgu.spl181.net.api.ServerCommands.ERRORmsg;
 import bgu.spl181.net.impl.Blockbuster.DataBaseHandler;
 import bgu.spl181.net.impl.Blockbuster.gsonimpl.UserJson;
 import bgu.spl181.net.impl.Blockbuster.gsonimpl.user;
