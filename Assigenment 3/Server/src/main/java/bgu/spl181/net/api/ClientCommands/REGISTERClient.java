@@ -35,15 +35,17 @@ public class REGISTERClient extends ClientCommandsAbstract {
             }
         }
         if(Commands.length >= 3 && !Commands[1].isEmpty() && !Commands[2].isEmpty() ) {
-            dataBaseHandler.getReadWriteLockUsers().writeLock();//lock the Users json file
+            dataBaseHandler.getReadWriteLockUsers().writeLock().lock();//lock the Users json file
             UserJson temp =new UserJson(dataBaseHandler.getPathUsers());
             users users = temp.getUsers();
             if(users.adduser(new user(Commands[1], Commands[2], type, country, balance))){
-                temp.UpdateUser(users);
-                return new ACKmsg().getMsg();
-            }else
+                temp.UpdateUser(users);// write to the json
+                dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
+                return new ACKmsg("registration succeeded").getMsg();
+            }else {
+                dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
                 return (new ERRORmsg("registration failed")).getMsg();
-
+            }
         }else
             return (new ERRORmsg("registration failed")).getMsg();
    }

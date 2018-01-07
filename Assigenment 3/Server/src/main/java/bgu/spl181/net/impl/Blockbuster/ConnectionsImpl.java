@@ -15,7 +15,7 @@ public class ConnectionsImpl <T> implements Connections<T> {
 
 	@Override
     public boolean send(int connectionId, T msg) {
-		if (!this.activeClients.containsKey(connectionId)) 
+		if (!this.activeClients.containsKey(connectionId))
 			return false; // this client id doesnt exist
 		try {
 			this.activeClients.get(connectionId).send(msg);
