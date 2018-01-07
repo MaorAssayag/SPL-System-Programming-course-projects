@@ -11,7 +11,7 @@ import bgu.spl181.net.impl.Blockbuster.gsonimpl.users;
  * this class represent an implementaion of the client command process levels.
  * Client commands:
  * 
- *	1) REGISTER <username> <password> [Data block,…] Used to register a new user to the system.
+ * 1) REGISTER <username> <password> [Data block,…] Used to register a new user to the system.
  *		• Username – The user name.
  *		• Password – the password.
  *		• Data Block – An optional block of additional information that may be used by the service.
