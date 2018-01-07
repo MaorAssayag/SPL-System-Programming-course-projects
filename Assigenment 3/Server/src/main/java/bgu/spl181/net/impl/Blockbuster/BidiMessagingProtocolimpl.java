@@ -11,11 +11,11 @@ import bgu.spl181.net.srv.ConnectionHandler;
  * This class is an implementation of BidiMessaginigProtocol which allow to process 
  * the client request via his handler by a thread from the ThreadPool. 
  * data members :
- * 		connectionId : the uniqe intger given by the ConnectionImpl class when we create a new handler for client's.
- * 		connections : for sending a message back to the client.
- * 		shouldTerminate : when we get logout command, the client handling should be terminate.
- * 		login : boolean that indicate if the user request to log in the system before.
- * 		Username : the name of this client.
+ * 		connectionId := the unique integer given by the ConnectionImpl class when we create a new handler for client's.
+ * 		connections := for sending a message back to the client.
+ * 		shouldTerminate := when we get logout command, the client handling should be terminate.
+ * 		login := boolean that indicate if the user request to log in the system before.
+ * 		username := the name of this client.
  *
  */
 public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> {

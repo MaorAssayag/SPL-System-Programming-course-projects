@@ -3,7 +3,8 @@ package bgu.spl181.net.impl.Blockbuster;
 import java.util.concurrent.locks.ReadWriteLock;
 /**
  * 
- * this class is aid class for W/R the json database files.
+ * this class is aid class for W/R the json database files with locks 
+ * (solving the sync in multi-thread implementation).
  * data member :
  *  	ReadWriteLockMovie - ReadWriteLock of the movie json file.
  *		readWriteLockUsers - ReadWriteLock of the user json file.
