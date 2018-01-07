@@ -5,18 +5,32 @@ import com.google.gson.GsonBuilder;
 
 import java.io.*;
 
+/**
+ * This class is aid class for get&set the data in the user database json file.
+ * data members :
+ * 		path := the current path of the user database json file.
+ * 		gsonread := GsonBuilder for reading the json file.
+ * 		gsonwrite := GsonBuilder for writing the json file.
+ */
 public class UserJson {
     private String Path;
     private Gson gsonread;
     private Gson gsonwrite;
 
+    /**
+     * default constructor.
+     * @param path
+     */
     public  UserJson(String path){
         this.Path = path;
         gsonread =  new GsonBuilder().setPrettyPrinting().setVersion(1).create();
         gsonwrite = new GsonBuilder().setPrettyPrinting().setVersion(1).create();
     }
 
-    //get the users from the json file
+    /**
+     * getter for the user data from the json file.
+     * @return users Object which contain an array of user Object's.
+     */
     public users getUsers() {
         users users = null;
         try (Reader reader = new FileReader(Path)){
@@ -30,6 +44,10 @@ public class UserJson {
         return users;
     }
 
+    /**
+     * setter(update) for the user data from the json file.
+     * @param movies
+     */
     public void UpdateUser(users users){
         try (Writer writer = new FileWriter(Path)){
             users.makeusersarrayforjson();
@@ -38,4 +56,8 @@ public class UserJson {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * End of File.
+     */
 }
