@@ -5,6 +5,13 @@ import java.util.Arrays;
 
 import bgu.spl181.net.api.bidi.MessageEncoderDecoder;
 
+/**
+ * This class is an implementation of MessageEncoderDecoder which allow to process 
+ * the socketChannel request via his handler by a thread from the ThreadPool. 
+ * data members :
+ * 		bytes := the initial buffer size will be 1k bytes.
+ * 		len := current bytes in the buffer.
+ */
 public class LineMessageEncoderDecoder implements MessageEncoderDecoder<String> {
 
     private byte[] bytes = new byte[1 << 10]; //start with 1k
