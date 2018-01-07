@@ -10,7 +10,7 @@ import static java.lang.Integer.*;
  *  	price := the cost to rent this movie.
  *  	bannedCountries := the banned countries that this movie cannot be broadcast into.
  * 	 	availableAmount := how many copies left to the server to rent to clients.
- * 		totalAmount := general ammount of copies of this movie.
+ * 		totalAmount := general amount of copies of this movie.
  */
 public class movie {
     private String id;
