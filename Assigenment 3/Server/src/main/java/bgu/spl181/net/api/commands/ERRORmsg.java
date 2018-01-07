@@ -17,7 +17,7 @@ public class ERRORmsg extends commandAbstract {
 	/**
 	 * will return "ERROR <MandatoryMessage>"
 	 */
-	String getMsg() {
+	public String getMsg() {
 		return this.commandName + " " + this.MandatoryMessage;
 	}
 	

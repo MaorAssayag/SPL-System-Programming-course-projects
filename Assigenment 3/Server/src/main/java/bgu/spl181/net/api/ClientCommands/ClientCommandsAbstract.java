@@ -2,11 +2,13 @@ package bgu.spl181.net.api.ClientCommands;
 
 import bgu.spl181.net.impl.Blockbuster.DataBaseHandler;
 
-public class ClientCommandsAbstract {
+import java.util.concurrent.locks.ReadWriteLock;
+
+public abstract class ClientCommandsAbstract {
     protected DataBaseHandler dataBaseHandler;
-    protected boolean Login;
+    protected String [] Commands;
 
-//    public abstract String Start(String [] ma)
 
+    public abstract String execute();
 
 }
