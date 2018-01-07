@@ -3,16 +3,27 @@ import java.util.HashMap;
 import bgu.spl181.net.api.bidi.Connections;
 import bgu.spl181.net.srv.ConnectionHandler;
 
+/**
+ * This class is an implementation of Connections which allow to send 
+ * the active clients the server response via his handler to the handler by a thread from the ThreadPool. 
+ * 
+ * @param <T>
+ */
 public class ConnectionsImpl <T> implements Connections<T> {
 	
 	private HashMap<Integer, ConnectionHandler<T>> activeClients = new HashMap<Integer, ConnectionHandler<T>>();
 	int counter = -1;
-
+	
+	/**
+	 * add to the current database of the active clients a new client with a unique clientID and his handler.
+	 * @param connectionHandler
+	 * @return the new client ID.
+	 */
 	public int addConnection(ConnectionHandler<T> connectionHandler){  
 	   activeClients.put(counter++,connectionHandler);
 	   return counter;
     }
-
+	
 	@Override
     public boolean send(int connectionId, T msg) {
 		if (!this.activeClients.containsKey(connectionId))
