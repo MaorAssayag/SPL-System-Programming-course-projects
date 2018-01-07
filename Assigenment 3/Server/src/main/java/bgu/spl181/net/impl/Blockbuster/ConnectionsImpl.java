@@ -12,7 +12,7 @@ import bgu.spl181.net.srv.ConnectionHandler;
 public class ConnectionsImpl <T> implements Connections<T> {
 	
 	private HashMap<Integer, ConnectionHandler<T>> activeClients = new HashMap<Integer, ConnectionHandler<T>>();
-	int counter = -1;
+	int counter = -1; // the first ID will be 0.
 	
 	/**
 	 * add to the current database of the active clients a new client with a unique clientID and his handler.
@@ -50,5 +50,8 @@ public class ConnectionsImpl <T> implements Connections<T> {
     		this.activeClients.remove(connectionId); // remove this client from the hash map
     	}
     } 
- 
+    
+    /**
+     * End of File.
+     */
 }

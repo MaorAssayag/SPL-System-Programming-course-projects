@@ -76,7 +76,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
     
     /**
      * aid function, get a string and return an array of strings,each cell contain a string 
-     * 				that was separate with " " in the original msg.
+     * that was separate with " " in the original msg.
      * @param msg
      * @return an array of strings that was separate with " ".
      */
