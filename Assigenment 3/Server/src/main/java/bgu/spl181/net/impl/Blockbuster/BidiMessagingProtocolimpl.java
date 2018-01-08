@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import bgu.spl181.net.api.ClientCommands.ClientCommandsAbstract;
 import bgu.spl181.net.api.ClientCommands.LOGINClient;
 import bgu.spl181.net.api.ClientCommands.REGISTERClient;
+import bgu.spl181.net.api.ClientCommands.SIGNOUTClient;
 import bgu.spl181.net.api.ServerCommands.ERRORmsg;
 import bgu.spl181.net.api.ServerCommands.commandAbstract;
 import bgu.spl181.net.api.bidi.BidiMessagingProtocol;
@@ -81,15 +82,23 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             	break;
             	
             case "SIGNOUT":
-            	
-            	
-            	
+            	if (this.login.get()) {
+            		ans = new SIGNOUTClient(dataBaseHandler,message).execute();
+            		if (ans.substring(0, 2).equals("ACK")) {
+            			this.login.set(false);
+            			ans = "dissconnect"; // for the server
+            		}
+            	}
+            	else
+            		ans = new ERRORmsg("signout failed").getMsg();	
             	break;
             case "REQUEST":
             	
-            	
-            	
             	break;                
+        }
+        if (ans.equals("dissconnect")) { //the user ask to SIGNOUT
+        	this.connections.send(this.connectionId, "ACK signout succeeded");
+        	this.connections.disconnect(this.connectionId);
         }
         return ans;
     }
