@@ -98,23 +98,29 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             case "REQUEST":
             	if (this.login.get()) {
             		ans = new REQUESTclient(dataBaseHandler, message, this.username).execute();
-            		if (ans.substring(0, 2).equals("BR")) { //then broadcast
+            		if (ans.substring(0, 3).equals("BR1")) { //then broadcast from rent request
             			String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
             			this.connections.send(this.connectionId, new ACKmsg("rent "+ '"'+movieName+'"' +" success").getMsg());
-            			this.connections.broadcast(new BROADCASTmsg(ans.substring(2)).getMsg());
+            			this.connections.broadcast(new BROADCASTmsg("movie "+ans.substring(3)).getMsg());
+            			return null;
             		}
-            		ans = "BR";
+            		if (ans.substring(0, 3).equals("BR2")) {//then broadcast from return request
+            			String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
+            			this.connections.send(this.connectionId, new ACKmsg("return "+ '"'+movieName+'"' +" success").getMsg());
+            			this.connections.broadcast(new BROADCASTmsg("movie "+ans.substring(3)).getMsg());
+            			return null;
+            		}
             	}
             	else
             		ans = new ERRORmsg("request "+ message[1] +" failed").getMsg();
             	break;
             	
-            case "BROADCAST":{
+            case "BROADCAST":{ // for broadcasting a message to all login users
             	if (this.login.get()) {
             		ans = messagein;
             	}
             }
-            	
+            
             default : // there is no such command
             	ans = new ERRORmsg("").getMsg();	
             	break;
@@ -124,8 +130,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
         	this.connections.send(this.connectionId, new ACKmsg("signout succeeded").getMsg());
         	this.connections.disconnect(this.connectionId);
         }else 
-        	if(!ans.equals("BR"))
-        		this.connections.send(this.connectionId, ans); // send the server response	  
+        	this.connections.send(this.connectionId, ans); // send the server response	  
         return ans;
     }
 

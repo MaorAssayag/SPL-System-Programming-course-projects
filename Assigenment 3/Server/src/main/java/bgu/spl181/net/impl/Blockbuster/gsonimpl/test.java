@@ -36,12 +36,19 @@ public class test  {
 //        ));
 //        movie movie =  movies.getMovie("c");
 //        movie.setPrice(123);
-    	String ans = "BR"+'"'+"check test"+'"'+" 14 "+"8";
-    	String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
-    	System.out.println(movieName);
-    	if (ans.substring(0, 2).equals("BR"))
-    		System.out.println("true");
-    	System.out.println(ans.substring(2));
+//    	String ans = "BR"+'"'+"check test"+'"'+" 14 "+"8";
+//    	String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
+//    	System.out.println(movieName);
+//    	if (ans.substring(0, 2).equals("BR"))
+//    		System.out.println("true");
+//    	System.out.println(ans.substring(2));
+    	String ans = "";
+    	String[] array = {"REQUEST", "return", "'"+"check","test"+'"',"blabla",'"'+"blabla"};
+    	for(int i = 2; i < array.length; i++) {
+    		ans +=" " + array[i];
+    	}
+    	ans = ans.substring(ans.indexOf('"')+1, ans.indexOf('"', ans.indexOf('"')+1));
+
 //        users u =new UserJson(path).getUsers();
 //        new UserJson("C:/Users/USER/Desktop/test/Userstest.json").UpdateUser(u);
     }

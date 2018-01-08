@@ -96,19 +96,54 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     currentMovie.RentThisMovie();
                     temp2.UpdateUser(currentUsers);
                     temp.UpdateMovies(currentMovies);
-                	//ans = new ACKmsg("rent "+ '"'+movieName+'"' +" success").getMsg();
-                	ans = "BR"+currentMovie.broadcastToString();
-                	//BROADCAST movie <”movie name”> < No. copies left > <price>
+                	//ans = new ACKmsg("rent "+ '"'+movieName+'"' +" success").getMsg(); - we send those later
+                    //BROADCAST movie <”movie name”> < No. copies left > <price>
+                	ans = "BR1"+currentMovie.broadcastToString();
                 	dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
                 	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
                 }
-                
-                case "return":
                 	break;
                 
-                default:{
+                case "return":
+                	String movieName = this.getMovieName(this.Commands);
+                    dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
+                    MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
+                    movies currentMovies = temp.getMovies();
+                    movie currentMovie = currentMovies.getMovie(movieName);
+                    
+                    // is this movie exist in the system ?
+                    if (currentMovie == null) {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
+                    	break;
+                    }
+                    dataBaseHandler.getReadWriteLockUsers().writeLock().lock();
+                    UserJson temp2 = new UserJson(dataBaseHandler.getPathUsers());
+                    users currentUsers = temp2.getUsers();
+                    user currentUser = currentUsers.GetUser(ClieantName);
+                    
+                    // is the user already renting the movie
+                    if (!currentUser.ReturnMovie(movieName)) {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
+                    	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
+                    	break;
+                    }
+                    
+                    //the user fit all requirements for returning the movie
+                    currentMovie.ReturnThisMovie();
+                    temp2.UpdateUser(currentUsers);
+                    temp.UpdateMovies(currentMovies);
+                	//ans = new ACKmsg("return "+ '"'+movieName+'"' +" success").getMsg(); - we send those later
+                    //BROADCAST movie <"movie name"> < No. copies left > <price>
+                	ans = "BR2"+currentMovie.broadcastToString();
+                	dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
+                	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();	
+                	break;
+                
+                default:
             	   ans = new ERRORmsg("request " + Commands[2] + " failed").getMsg();
-                }
+            	   break;
             }
         }else
             ans = new ERRORmsg("request " + Commands[1] +" failed").getMsg();
@@ -126,7 +161,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
     	for(int i = 2; i < array.length; i++) {
     		ans +=" " + array[i];
     	}
-    	ans = ans.substring(ans.indexOf('"')+1, ans.lastIndexOf('"'));
+    	ans = ans.substring(ans.indexOf('"')+1, ans.indexOf('"', ans.indexOf('"')+1));
 		return ans;
     }
     /**

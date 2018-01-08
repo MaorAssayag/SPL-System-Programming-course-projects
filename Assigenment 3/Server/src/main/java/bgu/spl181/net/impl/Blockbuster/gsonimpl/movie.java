@@ -46,6 +46,15 @@ public class movie {
     }
     
     /**
+     * return this movie and add 1 to the current available amount of copies.
+     */
+    public void ReturnThisMovie(){
+        int availableAmount = valueOf(this.availableAmount);
+        availableAmount++;
+        this.availableAmount = "" + availableAmount;
+    }
+    
+    /**
      * @return a boolean that indicate if this movie can be rent by more clients.
      */
     public boolean IsThereAMovieLeft(){
@@ -106,8 +115,9 @@ public class movie {
     }
     
     public String broadcastToString() {
-    	return '"'+name+'"'+ " "+availableAmount + " " + price;
+    	return '"'+name+'"'+ " "+availableAmount + " " + price; //<"movie name"> < No. copies left > <price>
     }
+    
     /**
      * @param country
      * @return true if country is in the forbidden countries list.
