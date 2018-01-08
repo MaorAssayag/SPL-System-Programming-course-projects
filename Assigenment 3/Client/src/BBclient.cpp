@@ -29,7 +29,7 @@ void SocketRead::run() {
         // we filled up to the \n char - we must make sure now that a 0 char is also present. So we truncate last character.
         answer.resize(len-1);
         std::cout << "Reply: " << answer << " " << len << " bytes " << std::endl << std::endl;
-        if (answer == "bye") {
+        if (answer == "ACK login succeeded") {
             std::cout << "Exiting...\n" << std::endl;
             break;
         }
