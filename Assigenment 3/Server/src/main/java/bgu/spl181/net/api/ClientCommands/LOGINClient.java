@@ -13,7 +13,7 @@ import bgu.spl181.net.impl.Blockbuster.gsonimpl.users;
  *		• Username – The username.
  *		• Password – The password.
  *
- *	In case of failure, an ERROR command will be sent by the server: ERROR login failed Reasons for failure:
+ * In case of failure, an ERROR command will be sent by the server: ERROR login failed Reasons for failure:
  *		1. Client performing LOGIN command already performed successful LOGIN command.
  *		2. Username already logged in.
  *		3. Username and Password combination does not fit any user in the system.

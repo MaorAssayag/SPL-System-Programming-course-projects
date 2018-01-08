@@ -61,7 +61,7 @@ public class REGISTERClient extends ClientCommandsAbstract {
             UserJson temp = new UserJson(dataBaseHandler.getPathUsers());
             users users = temp.getUsers();
             
-            if(!users.adduser(new user(Commands[1], Commands[2], type, country, balance))){
+            if(users.adduser(new user(Commands[1], Commands[2], type, country, balance))){
                 temp.UpdateUser(users);// write to the json
                 dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
                 return new ACKmsg("registration succeeded").getMsg();
