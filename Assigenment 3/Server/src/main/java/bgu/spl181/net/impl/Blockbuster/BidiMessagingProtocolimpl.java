@@ -57,12 +57,29 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
         String ans ="";
         switch (message [0]){
             case "REGISTER":
-                if(username == ""  && !login){
+                if(username == ""  && !login)
                     ans = new REGISTERClient(dataBaseHandler,message).execute();
-                }else
+                else
                     ans = new ERRORmsg("registration failed").getMsg();
+                break;
+                
+            case "LOGIN":
+            	
+            	
+            	
+            	break;
+            case "SIGNOUT":
+            	
+            	
+            	
+            	break;
+            case "REQUEST":
+            	
+            	
+            	
+            	break;                
         }
-    return ans;
+        return ans;
     }
 
     /**

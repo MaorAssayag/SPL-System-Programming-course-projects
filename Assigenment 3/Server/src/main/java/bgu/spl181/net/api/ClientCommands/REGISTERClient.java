@@ -8,8 +8,7 @@ import bgu.spl181.net.impl.Blockbuster.gsonimpl.user;
 import bgu.spl181.net.impl.Blockbuster.gsonimpl.users;
 
 /**
- * this class represent an implementaion of the client command process levels.
- * Client commands:
+ * this class represent an implementaion of the client REGISTER command process levels.
  * 
  * 1) REGISTER <username> <password> [Data block,…] Used to register a new user to the system.
  *		• Username – The user name.
@@ -49,15 +48,17 @@ public class REGISTERClient extends ClientCommandsAbstract {
         String country = "";
         String balance ="0";
         //check the optional data block
-            if(Commands.length == 4 && Commands[3].contains("country")){
-                country = Commands[3].substring(Commands[3].indexOf('"'),Commands[3].lastIndexOf('"'));
-            }
-
-
-        if(Commands.length >= 3 && !Commands[1].isEmpty() && !Commands[2].isEmpty() ) {
+        if(Commands.length >= 3 && Commands[3].contains("country"))
+            country = Commands[3].substring(Commands[3].indexOf('"'),Commands[3].lastIndexOf('"'));
+        else 
+        	return (new ERRORmsg("registration failed")).getMsg();
+        
+        //register the user if fit the requirements
+        if(!Commands[1].isEmpty() && !Commands[2].isEmpty()) {
             dataBaseHandler.getReadWriteLockUsers().writeLock().lock();//lock the Users json file
             UserJson temp = new UserJson(dataBaseHandler.getPathUsers());
             users users = temp.getUsers();
+            
             if(!users.adduser(new user(Commands[1], Commands[2], type, country, balance))){
                 temp.UpdateUser(users);// write to the json
                 dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
@@ -66,7 +67,8 @@ public class REGISTERClient extends ClientCommandsAbstract {
                 dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
                 return (new ERRORmsg("registration failed")).getMsg();
             }
-        }else
+        }
+        else
             return (new ERRORmsg("registration failed")).getMsg();
    }
     
