@@ -47,14 +47,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                         dataBaseHandler.getReadWriteLockMovie().readLock().lock();
                         MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
                         movies movies = temp.getMovies();
-                        ans = "";
-                        for (movie movie:movies.getMovies()) {
-                            if(ans.length() == 0)
-                                ans = movie.getName();
-                            else
-                                ans = ans + "," + movie.getName();
-                        }
-                        ans = new ACKmsg("info " + ans).getMsg();
+                        ans = new ACKmsg("info " + movies.toString()).getMsg();
                         dataBaseHandler.getReadWriteLockMovie().readLock().unlock();
                     }
                     else if (Commands.length == 3 ){
@@ -62,10 +55,12 @@ public class REQUESTclient extends ClientCommandsAbstract {
                         MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
                         movies movies = temp.getMovies();
                         movie movie = movies.getMovie(Commands[2]);
-                        
+                        ans = movie.toString();
+                        ans =  new ACKmsg("info " + ans ).getMsg();
+                        dataBaseHandler.getReadWriteLockMovie().readLock().unlock();
                     }
                     else{
-
+                        ans = new ERRORmsg("request " + Commands[2] + " failed").getMsg();
                     }
                 }
             }

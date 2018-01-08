@@ -92,11 +92,27 @@ public class movies {
         this.movies = ans;
     }
     /**
-     * @return the  movie array
+     * @return the  movie array.
      */
     public movie[] getMovies() {
         return movies;
     }
+    /**
+     * @return {@link String} of movies name.
+     */
+
+    @Override
+    public String toString() {
+        String ans = "";
+        for (movie movie:getMovies()) {
+            if(ans.length() == 0)
+                ans = movie.getName();
+            else
+                ans = ans + "," + movie.getName();
+        }
+        return ans;
+    }
+
     /**
      * End of File.
      */

@@ -41,10 +41,23 @@
       <file leaf-file-name="REQUESTclient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+            <state relative-caret-position="401">
+              <caret line="59" column="53" lean-forward="false" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="movies.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2">
+              <caret line="100" column="45" lean-forward="false" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+              <folding>
+                <element signature="e#2659#2660#0" expanded="true" />
+                <element signature="e#2688#2689#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,16 +82,6 @@
                 <element signature="e#2416#2417#0" expanded="true" />
                 <element signature="e#2462#2463#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="REGISTERClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REGISTERClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1080">
-              <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -127,8 +130,8 @@
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/user.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ServerCommands/ACKmsg.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java" />
       </list>
     </option>
@@ -139,7 +142,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="93" />
     <option name="y" value="51" />
     <option name="width" value="1400" />
@@ -533,10 +536,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47654000" />
+    <option name="totallyTimeSpent" value="47959000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -881,29 +884,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding>
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2462#2463#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ServerCommands/ACKmsg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REGISTERClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080">
-          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -924,17 +908,6 @@
         <state relative-caret-position="351">
           <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="97" column="22" lean-forward="true" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
-          <folding>
-            <element signature="e#2658#2659#0" expanded="true" />
-            <element signature="e#2687#2688#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -969,10 +942,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REGISTERClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <element signature="e#2416#2417#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="100" column="45" lean-forward="false" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+          <folding>
+            <element signature="e#2659#2660#0" expanded="true" />
+            <element signature="e#2688#2689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        <state relative-caret-position="401">
+          <caret line="59" column="53" lean-forward="false" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
