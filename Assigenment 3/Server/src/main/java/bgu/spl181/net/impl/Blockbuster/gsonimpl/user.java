@@ -93,7 +93,7 @@ public class user {
     
     /**
      * getter method of the password data member.
-     * @param Password
+     * @param password
      * @return the user password.
      */
     public Boolean PasswordCorrect(String password){
@@ -107,7 +107,11 @@ public class user {
     public int getBalance() {
         return Integer.valueOf(balance);
     }
-    
+
+    public void setBalance(String balance) {
+        this.balance = "" + (Integer.valueOf(this.balance) + Integer.valueOf(balance));
+    }
+
     /**
      * End of file.
      */

@@ -90,7 +90,21 @@ public class movie {
     public int getId() {
         return valueOf(id);
     }
-    
+
+    @Override
+    public String toString() {
+        String Countries = "";
+        if(bannedCountries.length !=0){
+            for (String name:bannedCountries) {
+                if(Countries.length() == 0)
+                    Countries = name;
+                else
+                    Countries = Countries + "," + name;
+            }
+        }
+        return name + "," + availableAmount + "," +price + "," + Countries ;
+    }
+
     /**
      * End of File.
      */

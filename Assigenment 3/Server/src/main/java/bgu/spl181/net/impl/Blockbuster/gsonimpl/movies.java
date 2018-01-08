@@ -91,7 +91,12 @@ public class movies {
         }
         this.movies = ans;
     }
-    
+    /**
+     * @return the  movie array
+     */
+    public movie[] getMovies() {
+        return movies;
+    }
     /**
      * End of File.
      */

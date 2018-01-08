@@ -7,6 +7,12 @@ public class test  {
     public static void main(String[] args){
         String a = "545";
         System.out.println(Integer.valueOf(a));
+        String [] con = {"c","d"};
+        movie movie = new movie("a",
+                "b",
+                con,
+                "1");
+        System.out.println(movie);
 //        String path ="C:/Users/USER/Desktop/test/Users.json";
 //        String [] con ={"a","c","f"};
 //        movies movies = new movies();
