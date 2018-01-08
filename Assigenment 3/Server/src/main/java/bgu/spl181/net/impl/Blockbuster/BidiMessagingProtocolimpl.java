@@ -86,7 +86,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             		ans = new SIGNOUTClient(dataBaseHandler,message).execute();
             		if (ans.substring(0, 2).equals("ACK")) {
             			this.login.set(false);
-            			ans = "dissconnect"; // for the server
+            			ans = "disconnect"; // for the server
             		}
             	}
             	else
@@ -99,6 +99,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
         if (ans.equals("dissconnect")) { //the user ask to SIGNOUT
         	this.connections.send(this.connectionId, "ACK signout succeeded");
         	this.connections.disconnect(this.connectionId);
+        	this.shouldTerminate = true;
         }
         return ans;
     }
