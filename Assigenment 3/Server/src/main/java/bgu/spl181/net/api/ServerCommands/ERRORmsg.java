@@ -20,6 +20,11 @@ public class ERRORmsg extends commandAbstract {
 	public String getMsg() {
 		return this.commandName + " " + this.MandatoryMessage;
 	}
+
+	@Override
+	String getType() {
+		return this.commandName; //="ERROR"
+	}
 	
 	/**
 	 * End of file.

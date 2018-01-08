@@ -22,6 +22,12 @@ public abstract class commandAbstract {
 	abstract String getMsg();
 	
 	/**
+	 * 
+	 * @return the type of the server response, i.e: ACK,ERROR etc'
+	 */
+	abstract String getType();
+	
+	/**
 	 * End of file.
 	 */
 }
