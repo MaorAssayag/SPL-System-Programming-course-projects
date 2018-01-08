@@ -40,7 +40,7 @@ public class REGISTERClient extends ClientCommandsAbstract {
     * When a REGISTER command is processed the user created will be a normal user with credit balance 0 by default.
 	* The service requires additional information about the user and the data block is where the user inserts that information.
 	* In this case, the only information we save on a specific user that is recieved from the REGISTER command is the users origin country.
-	* REGISTER <username> <password> country=”<country name>”
+	* REGISTER <username> <password> country="<country name>"
 	* 
 	* Commands array should contain : {"REGISTER",<username>,<password>,"country=<country name>"}
     */
