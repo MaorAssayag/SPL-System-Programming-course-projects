@@ -8,6 +8,8 @@ package bgu.spl181.net.srv;
 import java.io.Closeable;
 import java.io.IOException;
 
+import bgu.spl181.net.api.bidi.BidiMessagingProtocol;
+
 /**
  *
  * @author bennyl
@@ -15,5 +17,7 @@ import java.io.IOException;
 public interface ConnectionHandler<T> extends Closeable{
 
     void send(T msg) ;
+    
+    public BidiMessagingProtocol<T> getProtocol();
 
 }

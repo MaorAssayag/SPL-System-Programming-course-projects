@@ -97,14 +97,17 @@ public class movie {
         if(bannedCountries.length !=0){
             for (String name:bannedCountries) {
                 if(Countries.length() == 0)
-                    Countries = name;
+                    Countries = "'" +name+ "'";
                 else
-                    Countries = Countries + "," + name;
+                    Countries = Countries + "," + "'" +name+ "'";
             }
         }
         return name + "," + availableAmount + "," +price + "," + Countries ;
     }
     
+    public String broadcastToString() {
+    	return '"'+name+'"'+ " "+availableAmount + " " + price;
+    }
     /**
      * @param country
      * @return true if country is in the forbidden countries list.

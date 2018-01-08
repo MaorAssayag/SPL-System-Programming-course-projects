@@ -68,8 +68,8 @@ public class REQUESTclient extends ClientCommandsAbstract {
                 	String movieName = this.getMovieName(this.Commands);
                     dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
                     MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
-                    movies movies = temp.getMovies();
-                    movie currentMovie = movies.getMovie(movieName);
+                    movies currentMovies = temp.getMovies();
+                    movie currentMovie = currentMovies.getMovie(movieName);
                     
                     // is this movie exist in the system ? || no more copies of the movie that are available for rental
                     if (currentMovie == null || !currentMovie.IsThereAMovieLeft()) {
@@ -78,8 +78,9 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     	break;
                     }
                     dataBaseHandler.getReadWriteLockUsers().writeLock().lock();
-                    users users = new UserJson(dataBaseHandler.getPathUsers()).getUsers();
-                    user currentUser = users.GetUser(ClieantName);
+                    UserJson temp2 = new UserJson(dataBaseHandler.getPathUsers());
+                    users currentUsers = temp2.getUsers();
+                    user currentUser = currentUsers.GetUser(ClieantName);
                     
                     // is the user already renting the movie || does the user have enough money in their balance ?
                     // || The movie is banned in the user’s country
@@ -90,14 +91,23 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
                     	break;
                     }
-                    
                     //the user fit all requirements for renting the movie
-                    
+                    currentUser.addmovie(currentMovie);
+                    currentMovie.RentThisMovie();
+                    temp2.UpdateUser(currentUsers);
+                    temp.UpdateMovies(currentMovies);
+                	//ans = new ACKmsg("rent "+ '"'+movieName+'"' +" success").getMsg();
+                	ans = "BR"+currentMovie.broadcastToString();
+                	//BROADCAST movie <”movie name”> < No. copies left > <price>
+                	dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
+                	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
                 }
                 
+                case "return":
+                	break;
                 
                 default:{
-            	   ans = ans = new ERRORmsg("request " + Commands[2] + " failed").getMsg();
+            	   ans = new ERRORmsg("request " + Commands[2] + " failed").getMsg();
                 }
             }
         }else

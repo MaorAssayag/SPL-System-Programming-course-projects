@@ -40,7 +40,7 @@ public class ConnectionsImpl <T> implements Connections<T> {
     @Override
     public void broadcast(T msg) {
     	for(int id:this.activeClients.keySet()) {
-    		this.activeClients.get(id).send(msg);
+    		((ConnectionHandler<T>)this.activeClients.get(id)).getProtocol().process(msg);
     	}
     }
 

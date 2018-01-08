@@ -5,8 +5,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import bgu.spl181.net.api.ClientCommands.ClientCommandsAbstract;
 import bgu.spl181.net.api.ClientCommands.LOGINClient;
 import bgu.spl181.net.api.ClientCommands.REGISTERClient;
+import bgu.spl181.net.api.ClientCommands.REQUESTclient;
 import bgu.spl181.net.api.ClientCommands.SIGNOUTClient;
 import bgu.spl181.net.api.ServerCommands.ACKmsg;
+import bgu.spl181.net.api.ServerCommands.BROADCASTmsg;
 import bgu.spl181.net.api.ServerCommands.ERRORmsg;
 import bgu.spl181.net.api.ServerCommands.commandAbstract;
 import bgu.spl181.net.api.bidi.BidiMessagingProtocol;
@@ -92,9 +94,26 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             	else
             		ans = new ERRORmsg("signout failed").getMsg();	
             	break;
-            case "REQUEST":
             	
+            case "REQUEST":
+            	if (this.login.get()) {
+            		ans = new REQUESTclient(dataBaseHandler, message, this.username).execute();
+            		if (ans.substring(0, 2).equals("BR")) { //then broadcast
+            			String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
+            			this.connections.send(this.connectionId, new ACKmsg("rent "+ '"'+movieName+'"' +" success").getMsg());
+            			this.connections.broadcast(new BROADCASTmsg(ans.substring(2)).getMsg());
+            		}
+            		ans = "BR";
+            	}
+            	else
+            		ans = new ERRORmsg("request "+ message[1] +" failed").getMsg();
             	break;
+            	
+            case "BROADCAST":{
+            	if (this.login.get()) {
+            		ans = messagein;
+            	}
+            }
             	
             default : // there is no such command
             	ans = new ERRORmsg("").getMsg();	
@@ -105,7 +124,8 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
         	this.connections.send(this.connectionId, new ACKmsg("signout succeeded").getMsg());
         	this.connections.disconnect(this.connectionId);
         }else 
-        	this.connections.send(this.connectionId, ans); // send the server response
+        	if(!ans.equals("BR"))
+        		this.connections.send(this.connectionId, ans); // send the server response	  
         return ans;
     }
 

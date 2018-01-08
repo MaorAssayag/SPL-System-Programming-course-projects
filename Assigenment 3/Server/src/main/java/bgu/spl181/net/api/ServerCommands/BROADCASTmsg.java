@@ -21,12 +21,12 @@ public class BROADCASTmsg extends commandAbstract {
 	/**
 	 * will return "BROADCAST <MandatoryMessage>"
 	 */
-	String getMsg() {
+	public String getMsg() {
 		return this.commandName + " " + this.MandatoryMessage;
 	}
 
 	@Override
-	String getType() {
+	public String getType() {
 		return this.commandName; //="BROADCAST"
 	}
 	
