@@ -41,6 +41,8 @@ public class REGISTERClient extends ClientCommandsAbstract {
 	* The service requires additional information about the user and the data block is where the user inserts that information.
 	* In this case, the only information we save on a specific user that is recieved from the REGISTER command is the users origin country.
 	* REGISTER <username> <password> country=”<country name>”
+	* 
+	* Commands array should contain : {"REGISTER",<username>,<password>,"country=<country name>"}
     */
     @Override
     public String execute() {
@@ -48,7 +50,7 @@ public class REGISTERClient extends ClientCommandsAbstract {
         String country = "";
         String balance ="0";
         //check the optional data block
-        if(Commands.length >= 3 && Commands[3].contains("country"))
+        if(Commands.length >= 4 && Commands[3].contains("country"))
             country = Commands[3].substring(Commands[3].indexOf('"'),Commands[3].lastIndexOf('"'));
         else 
         	return (new ERRORmsg("registration failed")).getMsg();

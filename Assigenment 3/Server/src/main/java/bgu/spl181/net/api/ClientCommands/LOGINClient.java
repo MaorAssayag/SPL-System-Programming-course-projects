@@ -44,6 +44,7 @@ public class LOGINClient extends ClientCommandsAbstract {
             dataBaseHandler.getReadWriteLockUsers().readLock().lock();//lock the Users json file
             UserJson temp = new UserJson(dataBaseHandler.getPathUsers());
             users users = temp.getUsers();
+            
             if (users.exist(Commands[1], Commands[2])) {
             	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
             	return new ACKmsg("login succeeded").getMsg();
