@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="Client"/>
+		<Option title="Boost_Echo_Client"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Client">
-				<Option output="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Client.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="Boost_Echo_Client">
+				<Option output="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Boost_Echo_Client.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -53,14 +53,14 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 Client"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boost_Echo_Client"/>
 					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Client/fast">
-				<Option output="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Client.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="Boost_Echo_Client/fast">
+				<Option output="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Boost_Echo_Client.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -75,13 +75,28 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/6.4.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 Client/fast"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 Boost_Echo_Client/fast"/>
 					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/include">
+			<Option target="Boost_Echo_Client"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/include/ConnectionHandler.h">
+			<Option target="Boost_Echo_Client"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/src">
+			<Option target="Boost_Echo_Client"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/src/ConnectionHandler.cpp">
+			<Option target="Boost_Echo_Client"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/src/echoClient.cpp">
+			<Option target="Boost_Echo_Client"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

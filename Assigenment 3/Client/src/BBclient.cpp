@@ -5,11 +5,10 @@
 #include "../include/connectionHandler.h"
 #include "../include/BBclient.h"
 
-
 // Socketread thread
 
-SocketRead::SocketRead(ConnectionHandler connectionHandler):,_connectionHandler(connectionHandler) {};
-void SocketRead::run() {
+SocketRead::SocketRead(ConnectionHandler &connectionHandler):_connectionHandler(connectionHandler) {};
+void SocketRead::operator()() {
     while (1) {
         int len=0;
         // We can use one of three options to read data from the server:
@@ -39,8 +38,8 @@ void SocketRead::run() {
 
 // keyboardread thread
 
-keyboardRead::keyboardRead( ConnectionHandler connectionHandler):_connectionHandler(connectionHandler) {}
-void keyboardRead::run() {
+keyboardRead::keyboardRead( ConnectionHandler &connectionHandler):_connectionHandler(connectionHandler) {}
+void keyboardRead::operator()() {
     while (1) {
         const short bufsize = 1024;
         char buf[bufsize];
@@ -68,17 +67,17 @@ int main (int argc, char *argv[]) {
     }
     std::string host = argv[1];
     short port = atoi(argv[2]);
-    boost::mutex mutex ;
+    boost::mutex * mutex:
     ConnectionHandler connectionHandler(host, port, mutex);
     if (!connectionHandler.connect()) {
         std::cerr << "Cannot connect to " << host << ":" << port << std::endl;
         return 1;
     }
-    SocketRead socketRead (connectionHandler);//run socketRead
+    SocketRead  socketRead (connectionHandler);//run socketRead
     keyboardRead keyboardRead (connectionHandler);//run keyboardRead1
 
-    boost::thread th1(&SocketRead::run, &socketRead);
-    boost::thread th2(&keyboardRead::run, &keyboardRead);
+    boost::thread th1(socketRead);
+    boost::thread th2(keyboardRead);
     th1.join();//wait for the th1 finish
     th2.join();//wait for the th1 finish
     return 0;

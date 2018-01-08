@@ -48,10 +48,10 @@ RM = /cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E re
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client"
+CMAKE_SOURCE_DIR = /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug"
+CMAKE_BINARY_DIR = /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles" "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Client
+# Target rules for targets named Boost_Echo_Client
 
 # Build rule for target.
-Client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Client
-.PHONY : Client
+Boost_Echo_Client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Boost_Echo_Client
+.PHONY : Boost_Echo_Client
 
 # fast build rule for target.
-Client/fast:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
-.PHONY : Client/fast
-
-src/BBclient.o: src/BBclient.cpp.o
-
-.PHONY : src/BBclient.o
-
-# target to build an object file
-src/BBclient.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/BBclient.cpp.o
-.PHONY : src/BBclient.cpp.o
-
-src/BBclient.i: src/BBclient.cpp.i
-
-.PHONY : src/BBclient.i
-
-# target to preprocess a source file
-src/BBclient.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/BBclient.cpp.i
-.PHONY : src/BBclient.cpp.i
-
-src/BBclient.s: src/BBclient.cpp.s
-
-.PHONY : src/BBclient.s
-
-# target to generate assembly for a file
-src/BBclient.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/BBclient.cpp.s
-.PHONY : src/BBclient.cpp.s
+Boost_Echo_Client/fast:
+	$(MAKE) -f CMakeFiles/Boost_Echo_Client.dir/build.make CMakeFiles/Boost_Echo_Client.dir/build
+.PHONY : Boost_Echo_Client/fast
 
 src/ConnectionHandler.o: src/ConnectionHandler.cpp.o
 
@@ -156,7 +129,7 @@ src/ConnectionHandler.o: src/ConnectionHandler.cpp.o
 
 # target to build an object file
 src/ConnectionHandler.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/ConnectionHandler.cpp.o
+	$(MAKE) -f CMakeFiles/Boost_Echo_Client.dir/build.make CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o
 .PHONY : src/ConnectionHandler.cpp.o
 
 src/ConnectionHandler.i: src/ConnectionHandler.cpp.i
@@ -165,7 +138,7 @@ src/ConnectionHandler.i: src/ConnectionHandler.cpp.i
 
 # target to preprocess a source file
 src/ConnectionHandler.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/ConnectionHandler.cpp.i
+	$(MAKE) -f CMakeFiles/Boost_Echo_Client.dir/build.make CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.i
 .PHONY : src/ConnectionHandler.cpp.i
 
 src/ConnectionHandler.s: src/ConnectionHandler.cpp.s
@@ -174,7 +147,7 @@ src/ConnectionHandler.s: src/ConnectionHandler.cpp.s
 
 # target to generate assembly for a file
 src/ConnectionHandler.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/ConnectionHandler.cpp.s
+	$(MAKE) -f CMakeFiles/Boost_Echo_Client.dir/build.make CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.s
 .PHONY : src/ConnectionHandler.cpp.s
 
 src/echoClient.o: src/echoClient.cpp.o
@@ -183,7 +156,7 @@ src/echoClient.o: src/echoClient.cpp.o
 
 # target to build an object file
 src/echoClient.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/echoClient.cpp.o
+	$(MAKE) -f CMakeFiles/Boost_Echo_Client.dir/build.make CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o
 .PHONY : src/echoClient.cpp.o
 
 src/echoClient.i: src/echoClient.cpp.i
@@ -192,7 +165,7 @@ src/echoClient.i: src/echoClient.cpp.i
 
 # target to preprocess a source file
 src/echoClient.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/echoClient.cpp.i
+	$(MAKE) -f CMakeFiles/Boost_Echo_Client.dir/build.make CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.i
 .PHONY : src/echoClient.cpp.i
 
 src/echoClient.s: src/echoClient.cpp.s
@@ -201,7 +174,7 @@ src/echoClient.s: src/echoClient.cpp.s
 
 # target to generate assembly for a file
 src/echoClient.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/echoClient.cpp.s
+	$(MAKE) -f CMakeFiles/Boost_Echo_Client.dir/build.make CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.s
 .PHONY : src/echoClient.cpp.s
 
 # Help Target
@@ -212,10 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Client"
-	@echo "... src/BBclient.o"
-	@echo "... src/BBclient.i"
-	@echo "... src/BBclient.s"
+	@echo "... Boost_Echo_Client"
 	@echo "... src/ConnectionHandler.o"
 	@echo "... src/ConnectionHandler.i"
 	@echo "... src/ConnectionHandler.s"

@@ -1,6 +1,6 @@
 #ifndef CONNECTION_HANDLER__
 #define CONNECTION_HANDLER__
-
+                                           
 #include <string>
 #include <iostream>
 #include <boost/asio.hpp>
@@ -14,10 +14,10 @@ private:
 	const short port_;
 	boost::asio::io_service io_service_;   // Provides core I/O functionality
 	tcp::socket socket_;
-    boost::mutex * _mutex;  //to lock
- 
+    boost::mutex * mutex_;
+
 public:
-    ConnectionHandler(std::string host, short port ,boost::mutex * _mutex);
+    ConnectionHandler(std::string host, short port, boost::mutex * mutex_);
     virtual ~ConnectionHandler();
  
     // Connect to the remote machine
@@ -49,7 +49,7 @@ public:
 	
     // Close down the connection properly.
     void close();
-
+ 
 }; //class ConnectionHandler
  
 #endif

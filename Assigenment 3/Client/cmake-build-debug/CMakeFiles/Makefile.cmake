@@ -20,6 +20,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/share/cmake-3.8.2/Modules/Compiler/GNU-C.cmake"
   "/cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/share/cmake-3.8.2/Modules/Compiler/GNU-CXX.cmake"
   "/cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/share/cmake-3.8.2/Modules/Compiler/GNU.cmake"
+  "/cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/share/cmake-3.8.2/Modules/FindBoost.cmake"
   "/cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/share/cmake-3.8.2/Modules/Platform/CYGWIN-GNU-C.cmake"
   "/cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/share/cmake-3.8.2/Modules/Platform/CYGWIN-GNU-CXX.cmake"
   "/cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/share/cmake-3.8.2/Modules/Platform/CYGWIN-GNU.cmake"
@@ -47,5 +48,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Client.dir/DependInfo.cmake"
+  "CMakeFiles/Boost_Echo_Client.dir/DependInfo.cmake"
   )
