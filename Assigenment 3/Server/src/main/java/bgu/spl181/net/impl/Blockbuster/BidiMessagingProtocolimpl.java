@@ -49,7 +49,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
      * (NonBlicking/Blocking)ConnectionHandler. 
      * this String will be converted to array of string that contains in each cell a specific piece of data. 
      * @param messagein : this will be the client orginal stream to the server.
-     * @param return the respone of the server to the client, that should be send to the client via the channel.
+     * @return  the respone of the server to the client, that should be send to the client via the channel.
      */
     @Override
     public String process(String messagein) {
@@ -67,7 +67,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
 
     /**
      * when we get logout command, the client handling should be terminate.
-     * @param shouldTerminate
+     * @return shouldTerminate
      */
     @Override
     public boolean shouldTerminate() {
