@@ -84,6 +84,10 @@ public class users {
     	return ans;
     }
 
+    public user GetUser(String UserName){
+        return usersHash.get(UserName);
+    }
+
     /**
      * End Of File.
      */

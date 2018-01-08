@@ -28,9 +28,12 @@
       <file leaf-file-name="BidiMessagingProtocolimpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/BidiMessagingProtocolimpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="164">
+              <caret line="127" column="8" lean-forward="false" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="41" />
+              <folding>
+                <element signature="e#1719#1720#0" expanded="true" />
+                <element signature="e#1773#1774#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +41,8 @@
       <file leaf-file-name="REQUESTclient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            <state relative-caret-position="401">
+              <caret line="59" column="53" lean-forward="false" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,22 +50,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/users.java">
+      <file leaf-file-name="movies.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1024">
-              <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="21" />
+            <state relative-caret-position="-2">
+              <caret line="100" column="45" lean-forward="false" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+              <folding>
+                <element signature="e#2659#2660#0" expanded="true" />
+                <element signature="e#2688#2689#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="REGISTERClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REGISTERClient.java">
+      <file leaf-file-name="users.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="24" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+              <folding>
+                <element signature="e#2416#2417#0" expanded="true" />
+                <element signature="e#2462#2463#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,12 +114,8 @@
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/commands/commandAbstract.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/commands/ClientcommandAbstract.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/commands/ACKmsg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movie.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/MovieJson.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/UserMovie.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/users.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/rci/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/Tools.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/DataBaseHandler.java" />
@@ -110,8 +125,13 @@
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/srv/NonBlockingConnectionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/UserJson.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/BidiMessagingProtocolimpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/user.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REGISTERClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/user.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ServerCommands/ACKmsg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java" />
       </list>
     </option>
@@ -298,7 +318,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test (2)">
+  <component name="RunManager" selected="Application.test (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -485,8 +505,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.test (2)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.test (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Application.test (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.test (2)" />
         <item index="2" class="java.lang.String" itemvalue="Application.test" />
         <item index="3" class="java.lang.String" itemvalue="Application.NewsFeedServerMain" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.All in spl" />
@@ -516,7 +536,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44175000" />
+    <option name="totallyTimeSpent" value="47959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -531,13 +551,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25119048" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25119048" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18054055" sideWeight="0.49528936" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11547619" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11547619" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -591,14 +611,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.2/gson-2.8.2.jar!/com/google/gson/Gson.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/srv/test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/commands/ClientcommandAbstract.java" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/io/Closeable.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -655,6 +667,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-558">
           <caret line="977" column="38" lean-forward="true" selection-start-line="977" selection-start-column="38" selection-end-line="977" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -669,13 +682,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -726,14 +733,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8228">
           <caret line="679" column="19" lean-forward="false" selection-start-line="679" selection-start-column="19" selection-end-line="679" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="29" column="58" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding />
+          <folding>
+            <element signature="e#25329#25330#0" expanded="false" />
+            <element signature="e#25369#25370#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -758,14 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -881,22 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/BidiMessagingProtocolimpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REGISTERClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="24" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/UserJson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -905,26 +884,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ServerCommands/ACKmsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/BidiMessagingProtocolimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="127" column="8" lean-forward="false" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="41" />
+          <folding>
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="244" column="18" lean-forward="false" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
+          <folding>
+            <element signature="e#10225#10226#0" expanded="true" />
+            <element signature="e#10308#10309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="101" column="46" lean-forward="false" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/user.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="99" column="39" lean-forward="true" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
+        <state relative-caret-position="239">
+          <caret line="111" column="87" lean-forward="false" selection-start-line="111" selection-start-column="87" selection-end-line="111" selection-end-column="87" />
+          <folding>
+            <element signature="method#user#0;class#user#0" expanded="false" />
+            <element signature="method#addmovie#0;class#user#0" expanded="false" />
+            <element signature="method#ReturnMovie#0;class#user#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REGISTERClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1024">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="272">
+          <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <element signature="e#2416#2417#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="100" column="45" lean-forward="false" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+          <folding>
+            <element signature="e#2659#2660#0" expanded="true" />
+            <element signature="e#2688#2689#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        <state relative-caret-position="401">
+          <caret line="59" column="53" lean-forward="false" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
