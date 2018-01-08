@@ -80,7 +80,7 @@ public class user {
      * @return the user type.
      */
     public String getType() {
-        return type;
+        return this.type;
     }
 
     /**
@@ -88,16 +88,24 @@ public class user {
      * @return the user username.
      */
     public String getUsername() {
-        return username;
+        return this.username;
     }
     
+    /**
+     * getter method of the country data member.
+     * @return the user username.
+     */
+    public String getCountry() {
+        return this.country;
+    }
+
     /**
      * getter method of the password data member.
      * @param password
      * @return the user password.
      */
     public Boolean PasswordCorrect(String password){
-        return this.password == password;
+        return (this.password == password);
     }
 
     /**
@@ -110,6 +118,22 @@ public class user {
 
     public void setBalance(String balance) {
         this.balance = "" + (Integer.valueOf(this.balance) + Integer.valueOf(balance));
+    }
+
+    /**
+     * method that check if the user is already renting the movie 'movieName'
+     * @param movieName
+     * @return true if the user already renting this movie
+     */
+    public boolean isTheUserRentThisMovie(String movieName) {
+    	boolean ans = false;
+        for (UserMovie u:movies) {
+            if(u.getName() == movieName){
+            	ans = true;
+                break;
+            }
+        }
+		return ans;
     }
 
     /**

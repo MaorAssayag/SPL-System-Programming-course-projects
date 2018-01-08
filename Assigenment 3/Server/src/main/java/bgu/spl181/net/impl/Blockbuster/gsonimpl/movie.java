@@ -104,6 +104,21 @@ public class movie {
         }
         return name + "," + availableAmount + "," +price + "," + Countries ;
     }
+    
+    /**
+     * @param country
+     * @return true if country is in the forbidden countries list.
+     */
+    public boolean doesThisCountryForbidden(String country) {
+    	boolean ans = false;
+    	for (String tempCountry : bannedCountries) {
+    		if (tempCountry.equals(country)) {
+    			ans = true;
+    			break;
+    		}
+    	}
+		return ans;
+    }
 
     /**
      * End of File.

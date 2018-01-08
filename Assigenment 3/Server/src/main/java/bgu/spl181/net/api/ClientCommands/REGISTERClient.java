@@ -51,7 +51,7 @@ public class REGISTERClient extends ClientCommandsAbstract {
         String balance ="0";
         //check the optional data block
         if(Commands.length >= 4 && Commands[3].contains("country"))
-            country = Commands[3].substring(Commands[3].indexOf('"'),Commands[3].lastIndexOf('"'));
+            country = Commands[3].substring(Commands[3].indexOf('"')+1,Commands[3].lastIndexOf('"'));
         else 
         	return (new ERRORmsg("registration failed")).getMsg();
         
