@@ -1,7 +1,12 @@
 package bgu.spl181.net.impl.Blockbuster;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import bgu.spl181.net.api.ClientCommands.ClientCommandsAbstract;
+import bgu.spl181.net.api.ClientCommands.LOGINClient;
 import bgu.spl181.net.api.ClientCommands.REGISTERClient;
 import bgu.spl181.net.api.ServerCommands.ERRORmsg;
+import bgu.spl181.net.api.ServerCommands.commandAbstract;
 import bgu.spl181.net.api.bidi.BidiMessagingProtocol;
 import bgu.spl181.net.api.bidi.Connections;
 import bgu.spl181.net.impl.Blockbuster.gsonimpl.UserMovie;
@@ -23,7 +28,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
     private Connections<String> connections;
     private boolean shouldTerminate;
     private DataBaseHandler dataBaseHandler;
-    private boolean login;
+    private AtomicBoolean login;
     private String username = "";
 
     /**
@@ -31,7 +36,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
      * @param dataBaseHandler
      */
     public BidiMessagingProtocolimpl (DataBaseHandler dataBaseHandler){
-        this.dataBaseHandler=dataBaseHandler;
+        this.dataBaseHandler = dataBaseHandler;
     }
     
     /**
@@ -53,21 +58,28 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
      */
     @Override
     public String process(String messagein) {
-        String [] message =stringToArray(messagein);
-        String ans ="";
+        String [] message = stringToArray(messagein);
+        String ans = "";
         switch (message [0]){
             case "REGISTER":
-                if(username == ""  && !login)
+                if(username == ""  && !login.get())
                     ans = new REGISTERClient(dataBaseHandler,message).execute();
                 else
                     ans = new ERRORmsg("registration failed").getMsg();
                 break;
                 
             case "LOGIN":
-            	
-            	
-            	
+            	if (!this.login.get()) {
+            		ans = new LOGINClient(dataBaseHandler,message).execute();
+            		if (ans.substring(0, 2).equals("ACK")) {
+            			this.login.set(true);
+            			this.username = message[1];
+            		}
+            	}
+            	else
+            		ans = new ERRORmsg("login failed").getMsg();
             	break;
+            	
             case "SIGNOUT":
             	
             	
