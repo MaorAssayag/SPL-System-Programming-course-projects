@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReadWriteLock;
  * this interface describe the client Command object.
  * the Command object is used for specify the message to the server by the client.
  * data members :
- *      dataBaseHandler := common data for the lock&path, fix the synchronize issue. 
+ *      dataBaseHandler := common data for the lock and path, fix the synchronize issue. 
  *      Commands :=  mandatory data that been sent from the client.
  */
 public abstract class ClientCommandsAbstract {
