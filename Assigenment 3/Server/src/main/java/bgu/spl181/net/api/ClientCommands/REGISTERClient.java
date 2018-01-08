@@ -26,7 +26,7 @@ import bgu.spl181.net.impl.Blockbuster.gsonimpl.users;
  */
 public class REGISTERClient extends ClientCommandsAbstract {
 
-   public REGISTERClient(DataBaseHandler dataBaseHandler , String [] Commands){
+   public REGISTERClient(DataBaseHandler dataBaseHandler , String[] Commands){
        this.dataBaseHandler = dataBaseHandler;
        this.Commands = Commands;
    }

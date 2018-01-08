@@ -1,5 +1,10 @@
 package bgu.spl181.net.impl.Blockbuster.gsonimpl;
 
+/**
+ * aid class for the user and movie connection in the json file.
+ * @author MaorA
+ *
+ */
 public class UserMovie {
     private String id;
     private String name;
@@ -16,4 +21,8 @@ public class UserMovie {
     public int getId() {
         return Integer.valueOf(id);
     }
+    
+    /**
+     * End of File.
+     */
 }
