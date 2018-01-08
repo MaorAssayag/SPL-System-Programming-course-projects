@@ -55,6 +55,12 @@ public class users {
         users = ans;
     }
     
+    /**
+     * check if the user exist with this password.
+     * @param username
+     * @param password
+     * @return true if the user can login with the password.
+     */
     public boolean exist(String username, String password) {
     	boolean ans = false;
         user check = this.usersHash.get(username);
@@ -62,6 +68,20 @@ public class users {
         	ans = true;
         }
         return ans;
+    }
+    
+    /**
+     * check if username is admin in the system.
+     * @param username
+     * @return true if the username is admin.
+     */
+    public boolean isTheUserAdmin(String username) {
+    	boolean ans = false;
+    	user check = this.usersHash.get(username);
+    	if (check != null && check.getType()=="admin") {
+    		ans = true;
+    	}
+    	return ans;
     }
 
     /**
