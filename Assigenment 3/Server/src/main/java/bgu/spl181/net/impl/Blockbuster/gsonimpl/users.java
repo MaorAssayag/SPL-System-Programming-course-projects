@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class users {
     @Since(2) private ConcurrentHashMap<String,user> usersHash;
-    @Since(1) private user [] users;
+    @Since(1) private user[] users;
 
     /**
      * default constructor.
@@ -53,6 +53,15 @@ public class users {
             i++;
         }
         users = ans;
+    }
+    
+    public boolean exist(String username, String password) {
+    	boolean ans = false;
+        user check = this.usersHash.get(username);
+        if (check != null && check.PasswordCorrect(password)) {
+        	ans = true;
+        }
+        return ans;
     }
 
     /**
