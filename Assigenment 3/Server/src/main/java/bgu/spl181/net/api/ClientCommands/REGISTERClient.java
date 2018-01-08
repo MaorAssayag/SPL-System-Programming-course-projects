@@ -49,17 +49,11 @@ public class REGISTERClient extends ClientCommandsAbstract {
         String country = "";
         String balance ="0";
         //check the optional data block
-        for (int i = 3; i < Commands.length; i++) {
-            if(Commands[i].contains("type")){
-                type = Commands[i].substring(Commands[i].indexOf('"'),Commands[i].lastIndexOf('"'));
+            if(Commands.length == 4 && Commands[3].contains("country")){
+                country = Commands[3].substring(Commands[3].indexOf('"'),Commands[3].lastIndexOf('"'));
             }
-            if(Commands[i].contains("country")){
-                country = Commands[i].substring(Commands[i].indexOf('"'),Commands[i].lastIndexOf('"'));
-            }
-            if(Commands[i].contains("balance")){
-                balance = Commands[i].substring(Commands[i].indexOf('"'),Commands[i].lastIndexOf('"'));
-            }
-        }
+
+
         if(Commands.length >= 3 && !Commands[1].isEmpty() && !Commands[2].isEmpty() ) {
             dataBaseHandler.getReadWriteLockUsers().writeLock().lock();//lock the Users json file
             UserJson temp = new UserJson(dataBaseHandler.getPathUsers());
