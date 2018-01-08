@@ -1,9 +1,10 @@
 #ifndef CONNECTION_HANDLER__
 #define CONNECTION_HANDLER__
-                                           
+
 #include <string>
 #include <iostream>
-
+#include <boost/asio.hpp>
+#include <boost/thread.hpp>
 
 using boost::asio::ip::tcp;
 
@@ -16,7 +17,7 @@ private:
     boost::mutex * _mutex;  //to lock
  
 public:
-    ConnectionHandler(std::string host, short port ,mutex * _mutex);
+    ConnectionHandler(std::string host, short port ,boost::mutex * _mutex);
     virtual ~ConnectionHandler();
  
     // Connect to the remote machine

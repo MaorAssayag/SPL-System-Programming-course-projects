@@ -1,5 +1,5 @@
-#include "../include/ConnectionHandler.h"
-#include <iostream>
+#include "../include/connectionHandler.h"
+
 
 using boost::asio::ip::tcp;
 
@@ -9,7 +9,7 @@ using std::cerr;
 using std::endl;
 using std::string;
  
-ConnectionHandler::ConnectionHandler(string host, short port , mutex * _mutex): host_(host), port_(port), io_service_(), socket_(io_service_), _mutex(_mutex){}
+ConnectionHandler::ConnectionHandler(string host, short port , boost::mutex * _mutex): host_(host), port_(port), io_service_(), socket_(io_service_), _mutex(_mutex){}
     
 ConnectionHandler::~ConnectionHandler() {
     close();
@@ -90,7 +90,8 @@ bool ConnectionHandler::getFrameAscii(std::string& frame, char delimiter) {
 
 
 bool ConnectionHandler::sendFrameAscii(const std::string& frame, char delimiter) {
-    boost::mutex::scoped_lock lock(*_mutex);
+    boost::unique_lock<boost::mutex> lock(*_mutex);
+//    boost::mutex::scoped_lock lock(*_mutex);
     bool result=sendBytes(frame.c_str(),frame.length());
 	if(!result) return false;
 	return sendBytes(&delimiter,1);

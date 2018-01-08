@@ -2,7 +2,7 @@
 // Created by refael & maor on 05/01/2018.
 //
 #include <stdlib.h>
-#include "../../Client/include/connectionHandler.h"
+#include "../include/connectionHandler.h"
 #include "../include/BBclient.h"
 
 
@@ -68,7 +68,7 @@ int main (int argc, char *argv[]) {
     }
     std::string host = argv[1];
     short port = atoi(argv[2]);
-    boost::mutex mutex;
+    boost::mutex mutex ;
     ConnectionHandler connectionHandler(host, port, mutex);
     if (!connectionHandler.connect()) {
         std::cerr << "Cannot connect to " << host << ":" << port << std::endl;
