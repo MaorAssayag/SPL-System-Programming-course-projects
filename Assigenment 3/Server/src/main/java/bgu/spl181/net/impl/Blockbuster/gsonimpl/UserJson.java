@@ -46,7 +46,7 @@ public class UserJson {
 
     /**
      * setter(update) for the user data from the json file.
-     * @param movies
+     * @param users
      */
     public void UpdateUser(users users){
         try (Writer writer = new FileWriter(Path)){
