@@ -15,13 +15,12 @@ public class REQUESTclient extends ClientCommandsAbstract {
         this.Commands = Commands;
     }
 
-
     @Override
     public String execute() {
         String ans ="";
         if(Commands.length>=2){
             switch (Commands[1]) {
-                case "balance": {
+                case "balance":
                     if (Commands.length == 3 && Commands[2].equals("info")) {
                         dataBaseHandler.getReadWriteLockUsers().readLock().lock();
                         users users = new UserJson(dataBaseHandler.getPathUsers()).getUsers();
@@ -39,34 +38,88 @@ public class REQUESTclient extends ClientCommandsAbstract {
                         temp.UpdateUser(users);
                         dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
                     } else {
-                        ans = new ERRORmsg("request " + Commands[2] + " failed").getMsg();
+                        ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
                     }
-                }
-                case "info":{
-                    if(Commands.length == 2 ){
+                    break;
+               
+                case "info":
+                    if(Commands.length == 2){
                         dataBaseHandler.getReadWriteLockMovie().readLock().lock();
                         MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
                         movies movies = temp.getMovies();
                         ans = new ACKmsg("info " + movies.toString()).getMsg();
                         dataBaseHandler.getReadWriteLockMovie().readLock().unlock();
                     }
-                    else if (Commands.length == 3 ){
+                    else if (Commands.length == 3){
                         dataBaseHandler.getReadWriteLockMovie().readLock().lock();
                         MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
                         movies movies = temp.getMovies();
                         movie movie = movies.getMovie(Commands[2]);
                         ans = movie.toString();
-                        ans =  new ACKmsg("info " + ans ).getMsg();
+                        ans = new ACKmsg("info " + ans).getMsg();
                         dataBaseHandler.getReadWriteLockMovie().readLock().unlock();
                     }
                     else{
-                        ans = new ERRORmsg("request " + Commands[2] + " failed").getMsg();
+                        ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
                     }
+                    break;
+                
+                case "rent":{
+                	String movieName = this.getMovieName(this.Commands);
+                    dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
+                    MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
+                    movies movies = temp.getMovies();
+                    movie currentMovie = movies.getMovie(movieName);
+                    
+                    // is this movie exist in the system ? || no more copies of the movie that are available for rental
+                    if (currentMovie == null || !currentMovie.IsThereAMovieLeft()) {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
+                    	break;
+                    }
+                    dataBaseHandler.getReadWriteLockUsers().writeLock().lock();
+                    users users = new UserJson(dataBaseHandler.getPathUsers()).getUsers();
+                    user currentUser = users.GetUser(ClieantName);
+                    
+                    // is the user already renting the movie || does the user have enough money in their balance ?
+                    // || The movie is banned in the user’s country
+                    if (currentUser.isTheUserRentThisMovie(movieName) || !currentUser.CanIRent(currentMovie.getPrice())
+                    		|| currentMovie.doesThisCountryForbidden(currentUser.getCountry())) {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
+                    	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
+                    	break;
+                    }
+                    
+                    //the user fit all requirements for renting the movie
+                    
+                }
+                
+                
+                default:{
+            	   ans = ans = new ERRORmsg("request " + Commands[2] + " failed").getMsg();
                 }
             }
-        }else{
+        }else
             ans = new ERRORmsg("request " + Commands[1] +" failed").getMsg();
-        }
         return ans;
     }
+    
+    /**
+     * this method will get the rent request and return the name of the movie
+     * i.e: {XX,XX,"The,godfather"} and return "The godfather".
+     * @param array
+     * @return the name of the requested movie
+     */
+    public String getMovieName(String[] array) {
+    	String ans = "";
+    	for(int i = 2; i < array.length; i++) {
+    		ans +=" " + array[i];
+    	}
+    	ans = ans.substring(ans.indexOf('"')+1, ans.lastIndexOf('"'));
+		return ans;
+    }
+    /**
+     * End of File.
+     */
 }
