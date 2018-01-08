@@ -23,7 +23,6 @@ import bgu.spl181.net.srv.ConnectionHandler;
  * 		shouldTerminate := when we get logout command, the client handling should be terminate.
  * 		login := boolean that indicate if the user request to log in the system before.
  * 		username := the name of this client.
- *
  */
 public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> {
     private int connectionId;
@@ -69,7 +68,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
                 else
                     ans = new ERRORmsg("registration failed").getMsg();
                 break;
-                
+               
             case "LOGIN":
             	if (!this.login.get()) {
             		ans = new LOGINClient(dataBaseHandler,message).execute();
@@ -95,13 +94,18 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             	break;
             case "REQUEST":
             	
-            	break;                
+            	break;
+            	
+            default : // there is no such command
+            	ans = new ERRORmsg("").getMsg();	
+            	break;
         }
         if (ans.equals("disconnect")) { //the user ask to SIGNOUT - start the Terminate process
         	this.shouldTerminate = true;
         	this.connections.send(this.connectionId, new ACKmsg("signout succeeded").getMsg());
         	this.connections.disconnect(this.connectionId);
-        }
+        }else 
+        	this.connections.send(this.connectionId, ans); // send the server response
         return ans;
     }
 
