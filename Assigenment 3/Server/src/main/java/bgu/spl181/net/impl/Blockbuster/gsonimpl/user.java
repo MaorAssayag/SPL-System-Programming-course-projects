@@ -76,7 +76,7 @@ public class user {
     }
 
     /**
-     * getter method of the type data member.
+     * getter method of the type data member - admin/regular client.
      * @return the user type.
      */
     public String getType() {

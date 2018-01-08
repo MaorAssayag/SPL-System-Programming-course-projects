@@ -6,6 +6,7 @@ import bgu.spl181.net.api.ClientCommands.ClientCommandsAbstract;
 import bgu.spl181.net.api.ClientCommands.LOGINClient;
 import bgu.spl181.net.api.ClientCommands.REGISTERClient;
 import bgu.spl181.net.api.ClientCommands.SIGNOUTClient;
+import bgu.spl181.net.api.ServerCommands.ACKmsg;
 import bgu.spl181.net.api.ServerCommands.ERRORmsg;
 import bgu.spl181.net.api.ServerCommands.commandAbstract;
 import bgu.spl181.net.api.bidi.BidiMessagingProtocol;
@@ -98,14 +99,14 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
         }
         if (ans.equals("disconnect")) { //the user ask to SIGNOUT - start the Terminate process
         	this.shouldTerminate = true;
-        	this.connections.send(this.connectionId, "ACK signout succeeded");
+        	this.connections.send(this.connectionId, new ACKmsg("signout succeeded").getMsg());
         	this.connections.disconnect(this.connectionId);
         }
         return ans;
     }
 
     /**
-     * when we get logout command, the client handling should be terminate.
+     * when we get signout command, the client handling should be terminate.
      * @return shouldTerminate
      */
     @Override
