@@ -30,6 +30,11 @@ public class ACKmsg extends commandAbstract {
 	public String getMsg() {
 		return this.commandName + " " + this.OptionalMessage;
 	}
+
+	@Override
+	String getType() {
+		return this.commandName; // ="ACK"
+	}
 	
 	/**
 	 * End of file.
