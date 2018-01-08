@@ -24,6 +24,11 @@ public class BROADCASTmsg extends commandAbstract {
 	String getMsg() {
 		return this.commandName + " " + this.MandatoryMessage;
 	}
+
+	@Override
+	String getType() {
+		return this.commandName; //="BROADCAST"
+	}
 	
 	/**
 	 * End of file.
