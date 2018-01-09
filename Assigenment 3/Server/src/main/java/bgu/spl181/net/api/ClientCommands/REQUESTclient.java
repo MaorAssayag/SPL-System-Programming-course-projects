@@ -97,7 +97,6 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     temp2.UpdateUser(currentUsers);
                     temp.UpdateMovies(currentMovies);
                 	//ans = new ACKmsg("rent "+ '"'+movieName+'"' +" success").getMsg(); - we send those later
-                    //BROADCAST movie <”movie name”> < No. copies left > <price>
                 	ans = "BR1"+currentMovie.broadcastToString();
                 	dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
                 	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
@@ -139,7 +138,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                 	ans = "BR2"+currentMovie.broadcastToString();
                 	dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
                 	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();	
-                }
+                	}
                 	break;
                 
                 case "addmovie":{
@@ -156,7 +155,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     
                 	String[] movieData = this.getMovieData(this.Commands);
                 	String movieName = movieData[0];
-                    dataBaseHandler.getReadWriteLockMovie().readLock().lock();
+                    dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
                     MovieJson temp1 = new MovieJson(dataBaseHandler.getPathMovie());
                     movies movies = temp1.getMovies();
                     
@@ -164,18 +163,55 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     if (movies.getMovie(movieName) != null || Integer.valueOf(movieData[2]) <= 0) {
                     	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
                     	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
-                        dataBaseHandler.getReadWriteLockMovie().readLock().unlock();
+                        dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
                     	break;
                     }
-                    //
                     
-                    
-                    
-
-                }
+                    //add the movie
+                    String[] bannedCountries = this.extractBannedcountry(this.Commands, movieData[3]);
+                    movie currentMovie = new movie(movieName, movieData[2], bannedCountries, movieData[1]);
+                    movies.AddMovie(currentMovie);
+                    temp1.UpdateMovies(movies);
+                	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
+                    dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
+                	ans = "BR3"+currentMovie.broadcastToString(); // for later handling and broadcsting
+                	}
                 	break;
                 	
-                case "remmovie":
+                case "remmovie":{
+                	//does this user admin?
+                    dataBaseHandler.getReadWriteLockUsers().readLock().lock();
+                    UserJson temp2 = new UserJson(dataBaseHandler.getPathUsers());
+                    users currentUsers = temp2.getUsers();
+                    user currentUser = currentUsers.GetUser(ClieantName);
+                    if (currentUser.getType() != "admin") {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
+                    	break;
+                    }
+                    
+                	String[] movieData = this.getMovieData(this.Commands);
+                	String movieName = movieData[0];
+                    dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
+                    MovieJson temp1 = new MovieJson(dataBaseHandler.getPathMovie());
+                    movies movies = temp1.getMovies();
+                    movie currMovie = movies.getMovie(movieName);
+                    
+                    // does this movie exist? || someone retnting this movie
+                    if (currMovie == null || currMovie.isSomeoneRetning()) {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
+                        dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
+                    	break;
+                    }
+                    
+                    //remove this movie
+                    movies.RemoveMovie(movieName);
+                    temp1.UpdateMovies(movies);
+                	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
+                    dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
+                	ans = "BR4"+currMovie.broadcastToString(); // for later handling and broadcsting    
+                }
                 	break;
                 	
                 case "changeprice":
@@ -232,11 +268,11 @@ public class REQUESTclient extends ClientCommandsAbstract {
     }
     
     /**
-     * this method will get the command array from the client and
+     * this method will get the command from the client and
      * return the banned country array {<country name>,<country name>,..}
-     * @param array
+     * @param command
      * @param startFrom
-     * @return
+     * @return the banned country array {<country name>,<country name>,..}
      */
     public String[] extractBannedcountry(String[] command, String startFrom) {
     	int position = Integer.valueOf(startFrom);

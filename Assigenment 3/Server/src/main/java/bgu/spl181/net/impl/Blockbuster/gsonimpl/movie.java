@@ -132,6 +132,16 @@ public class movie {
     	}
 		return ans;
     }
+    
+    /**
+     * @return true if someone renting this movie
+     */
+    public boolean isSomeoneRetning() {
+    	boolean ans = false;
+    	if (Integer.valueOf(this.availableAmount) < Integer.valueOf(this.totalAmount))
+    		ans = true;
+    	return ans;
+    }
 
     /**
      * End of File.

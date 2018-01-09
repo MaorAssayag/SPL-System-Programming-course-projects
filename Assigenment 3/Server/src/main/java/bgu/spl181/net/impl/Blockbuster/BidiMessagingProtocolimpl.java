@@ -98,18 +98,35 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             case "REQUEST":
             	if (this.login.get()) {
             		ans = new REQUESTclient(dataBaseHandler, message, this.username).execute();
-            		if (ans.substring(0, 3).equals("BR1")) { //then broadcast from rent request
+            		switch (ans.substring(0, 3)) {
+					case "BR1":{ // rent command
             			String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
             			this.connections.send(this.connectionId, new ACKmsg("rent "+ '"'+movieName+'"' +" success").getMsg());
             			this.connections.broadcast(new BROADCASTmsg("movie "+ans.substring(3)).getMsg());
             			return null;
-            		}
-            		if (ans.substring(0, 3).equals("BR2")) {//then broadcast from return request
+					}
+					case "BR2":{ // return command
             			String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
             			this.connections.send(this.connectionId, new ACKmsg("return "+ '"'+movieName+'"' +" success").getMsg());
             			this.connections.broadcast(new BROADCASTmsg("movie "+ans.substring(3)).getMsg());
             			return null;
-            		}
+					}
+					case "BR3":{ // addmovie command
+            			String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
+            			this.connections.send(this.connectionId, new ACKmsg("addmovie "+ '"'+movieName+'"' +" success").getMsg());
+            			this.connections.broadcast(new BROADCASTmsg("movie "+ans.substring(3)).getMsg());
+            			return null;
+					}
+					case "BR4":{ //remmovie command
+            			String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
+            			this.connections.send(this.connectionId, new ACKmsg("remmovie "+ '"'+movieName+'"' +" success").getMsg());
+            			this.connections.broadcast(new BROADCASTmsg("movie "+'"'+movieName+'"'+" removed").getMsg());
+            			return null;
+					}
+					default:
+						ans = new ERRORmsg("request "+ message[1] +" failed").getMsg();
+						break;
+					}
             	}
             	else
             		ans = new ERRORmsg("request "+ message[1] +" failed").getMsg();
