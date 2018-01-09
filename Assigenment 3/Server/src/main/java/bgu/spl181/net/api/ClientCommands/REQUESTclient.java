@@ -42,7 +42,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     }
                     break;
                
-                case "info":
+                case "info":{
                     if(Commands.length == 2){
                         dataBaseHandler.getReadWriteLockMovie().readLock().lock();
                         MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
@@ -61,7 +61,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     }
                     else{
                         ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
-                    }
+                    }}
                     break;
                 
                 case "rent":{
@@ -101,10 +101,10 @@ public class REQUESTclient extends ClientCommandsAbstract {
                 	ans = "BR1"+currentMovie.broadcastToString();
                 	dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
                 	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
-                }
+                	}
                 	break;
                 
-                case "return":
+                case "return":{
                 	String movieName = this.getMovieName(this.Commands);
                     dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
                     MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
@@ -139,8 +139,47 @@ public class REQUESTclient extends ClientCommandsAbstract {
                 	ans = "BR2"+currentMovie.broadcastToString();
                 	dataBaseHandler.getReadWriteLockUsers().writeLock().unlock();
                 	dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();	
+                }
                 	break;
                 
+                case "addmovie":{
+                	//does this user admin?
+                    dataBaseHandler.getReadWriteLockUsers().readLock().lock();
+                    UserJson temp2 = new UserJson(dataBaseHandler.getPathUsers());
+                    users currentUsers = temp2.getUsers();
+                    user currentUser = currentUsers.GetUser(ClieantName);
+                    if (currentUser.getType() != "admin") {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
+                    	break;
+                    }
+                    
+                	String[] movieData = this.getMovieData(this.Commands);
+                	String movieName = movieData[0];
+                    dataBaseHandler.getReadWriteLockMovie().readLock().lock();
+                    MovieJson temp1 = new MovieJson(dataBaseHandler.getPathMovie());
+                    movies movies = temp1.getMovies();
+                    
+                    // does this movie exist? || the movie price <= 0
+                    if (movies.getMovie(movieName) != null || Integer.valueOf(movieData[2]) <= 0) {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
+                        dataBaseHandler.getReadWriteLockMovie().readLock().unlock();
+                    	break;
+                    }
+                    //
+                    
+                    
+                    
+
+                }
+                	break;
+                	
+                case "remmovie":
+                	break;
+                	
+                case "changeprice":
+                	break;
                 default:
             	   ans = new ERRORmsg("request " + Commands[2] + " failed").getMsg();
             	   break;
@@ -151,8 +190,8 @@ public class REQUESTclient extends ClientCommandsAbstract {
     }
     
     /**
-     * this method will get the rent request and return the name of the movie
-     * i.e: {XX,XX,"The,godfather"} and return "The godfather".
+     * this method will get the rent request and return the name of the movie for the rent and return commands.
+     * i.e: {XX,XX,"The,godfather"} and return a string <The godfather>.
      * @param array
      * @return the name of the requested movie
      */
@@ -163,6 +202,64 @@ public class REQUESTclient extends ClientCommandsAbstract {
     	}
     	ans = ans.substring(ans.indexOf('"')+1, ans.indexOf('"', ans.indexOf('"')+1));
 		return ans;
+    }
+    
+    /**
+     * get the command array and retun {<movie name>,<amount of copies>,<price>,<start index of banned country>}
+     * @param array
+     * @return
+     */
+    public String[] getMovieData(String[] array) {
+    	String[] ans = new String[4];
+    	String name = "";
+    	int lastindex = 0;
+    	for(int i = 2; i < array.length; i++) {
+    		if (i==2) 
+    			name = array[i];
+    		else
+    		   name +=" " + array[i];
+    		if (name.lastIndexOf('"')==name.length()-1) {
+    			lastindex = i;
+    			break;
+    		}
+    	}
+    	name = name.substring(name.indexOf('"')+1, name.indexOf('"', name.indexOf('"')+1));
+    	ans[0] = name;
+    	ans[1] = array[lastindex+1];
+    	ans[2] = array [lastindex +2];
+    	ans[3] = "" + (lastindex+3);
+		return ans;
+    }
+    
+    /**
+     * this method will get the command array from the client and
+     * return the banned country array {<country name>,<country name>,..}
+     * @param array
+     * @param startFrom
+     * @return
+     */
+    public String[] extractBannedcountry(String[] command, String startFrom) {
+    	int position = Integer.valueOf(startFrom);
+    	String[] answer = new String[command.length-position];
+    	String currName = "";
+    	int last = 0;
+    	int currentCountry = 0;
+    	while (position < command.length) {
+        	for(int i = position; i<command.length; i++) {
+        		if (i==position) 
+        			currName = command[i];
+        		else
+        			currName +=" " + command[i];
+        		if (currName.lastIndexOf('"')==currName.length()-1) {
+        			position = i+1;
+        			break;
+        		}
+        	}
+        	answer[currentCountry] = currName.substring(1,currName.length()-1);
+        	currentCountry++;
+        	currName = "";
+    	}
+    	return command;
     }
     /**
      * End of File.
