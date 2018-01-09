@@ -48,10 +48,10 @@ RM = /cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E re
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client
+CMAKE_SOURCE_DIR = "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug
+CMAKE_BINARY_DIR = "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles" "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

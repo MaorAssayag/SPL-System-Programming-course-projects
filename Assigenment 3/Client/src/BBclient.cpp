@@ -28,7 +28,8 @@ void SocketRead::operator()() {
         // we filled up to the \n char - we must make sure now that a 0 char is also present. So we truncate last character.
         answer.resize(len-1);
         std::cout << "Reply: " << answer << " " << len << " bytes " << std::endl << std::endl;
-        if (answer == "ACK login succeeded") {
+        if (answer == "ACK signout succeeded") {
+            _connectionHandler.shutdownow();
             std::cout << "Exiting...\n" << std::endl;
             break;
         }
@@ -45,13 +46,14 @@ void keyboardRead::operator()() {
         char buf[bufsize];
         std::cin.getline(buf, bufsize);
         std::string line(buf);
-        int len=line.length();
         if (!_connectionHandler.sendLine(line)) {
             std::cout << "Disconnected. Exiting...\n" << std::endl;
             break;
         }
+        if(_connectionHandler.isshutdown())
+            break;
         // connectionHandler.sendLine(line) appends '\n' to the message. Therefor we send len+1 bytes.
-        std::cout << "Sent " << len+1 << " bytes to server" << std::endl;
+       // std::cout << "Sent " << len+1 << " bytes to server" << std::endl;
     }
 }
 
@@ -67,8 +69,7 @@ int main (int argc, char *argv[]) {
     }
     std::string host = argv[1];
     short port = atoi(argv[2]);
-    boost::mutex * mutex:
-    ConnectionHandler connectionHandler(host, port, mutex);
+    ConnectionHandler connectionHandler(host, port);
     if (!connectionHandler.connect()) {
         std::cerr << "Cannot connect to " << host << ":" << port << std::endl;
         return 1;
@@ -78,7 +79,6 @@ int main (int argc, char *argv[]) {
 
     boost::thread th1(socketRead);
     boost::thread th2(keyboardRead);
-    th1.join();//wait for the th1 finish
-    th2.join();//wait for the th1 finish
+    th2.join();//wait for the th2 finish
     return 0;
 }

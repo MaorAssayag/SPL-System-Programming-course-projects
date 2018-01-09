@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/../../../../boost_1_66_0/boost_1_66_0 
+CXX_INCLUDES = -I"/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/../../../../../../boost_1_66_0/boost_1_66_0" 
 

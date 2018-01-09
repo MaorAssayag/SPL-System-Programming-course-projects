@@ -10,9 +10,9 @@ set(SOURCE_FILES
 # see https://cmake.org/cmake/help/latest/module/FindBoost.html
 find_package(Boost)
 
-include_directories(../../../../boost_1_66_0/boost_1_66_0)
+include_directories(../../../../../../boost_1_66_0/boost_1_66_0)
 # Note: a target should be already defined using 'add_executable' or 'add_library'
-link_libraries(../../../../boost_1_66_0/boost_1_66_0/stage/lib)
+link_libraries(../../../../../../boost_1_66_0/boost_1_66_0/stage/lib)
 
 
 add_executable(Boost_Echo_Client ${SOURCE_FILES}

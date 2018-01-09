@@ -14,10 +14,10 @@ private:
 	const short port_;
 	boost::asio::io_service io_service_;   // Provides core I/O functionality
 	tcp::socket socket_;
-    boost::mutex * mutex_;
+    bool shutdown;
 
 public:
-    ConnectionHandler(std::string host, short port, boost::mutex * mutex_);
+    ConnectionHandler(std::string host, short port);
     virtual ~ConnectionHandler();
  
     // Connect to the remote machine
@@ -49,7 +49,12 @@ public:
 	
     // Close down the connection properly.
     void close();
- 
+
+    // return if need to shutdown
+    bool isshutdown();
+
+    //  shutdown
+    void shutdownow();
 }; //class ConnectionHandler
  
 #endif

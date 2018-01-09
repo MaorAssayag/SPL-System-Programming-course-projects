@@ -43,10 +43,10 @@ RM = /cygdrive/c/Users/USER/.CLion2017.2/system/cygwin_cmake/bin/cmake.exe -E re
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client
+CMAKE_SOURCE_DIR = "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug
+CMAKE_BINARY_DIR = "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Boost_Echo_Client.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Boost_Echo_Client.dir/flags.make
 
 CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o: CMakeFiles/Boost_Echo_Client.dir/flags.make
 CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o: ../src/ConnectionHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o -c /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/src/ConnectionHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o -c "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/ConnectionHandler.cpp"
 
 CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/src/ConnectionHandler.cpp > CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.i
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/ConnectionHandler.cpp" > CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.i
 
 CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/src/ConnectionHandler.cpp -o CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.s
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/ConnectionHandler.cpp" -o CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.s
 
 CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o.provides.build: CMa
 
 CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o: CMakeFiles/Boost_Echo_Client.dir/flags.make
 CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o: ../src/echoClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o -c /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/src/echoClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o -c "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/echoClient.cpp"
 
 CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/src/echoClient.cpp > CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.i
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/echoClient.cpp" > CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.i
 
 CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/src/echoClient.cpp -o CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.s
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/echoClient.cpp" -o CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.s
 
 CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o.requires:
 
@@ -117,7 +117,7 @@ Boost_Echo_Client.exe: CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cp
 Boost_Echo_Client.exe: CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o
 Boost_Echo_Client.exe: CMakeFiles/Boost_Echo_Client.dir/build.make
 Boost_Echo_Client.exe: CMakeFiles/Boost_Echo_Client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Boost_Echo_Client.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Boost_Echo_Client.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Boost_Echo_Client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/Boost_Echo_Client.dir/clean:
 .PHONY : CMakeFiles/Boost_Echo_Client.dir/clean
 
 CMakeFiles/Boost_Echo_Client.dir/depend:
-	cd /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug /cygdrive/c/Users/USER/Documents/GitHub/Boost_Echo_Client/Boost_Echo_Client/cmake-build-debug/CMakeFiles/Boost_Echo_Client.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client" "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client" "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug" "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug" "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles/Boost_Echo_Client.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Boost_Echo_Client.dir/depend
 
