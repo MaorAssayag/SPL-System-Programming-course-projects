@@ -190,8 +190,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     	break;
                     }
                     
-                	String[] movieData = this.getMovieData(this.Commands);
-                	String movieName = movieData[0];
+                	String movieName = this.getMovieName(this.Commands);
                     dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
                     MovieJson temp1 = new MovieJson(dataBaseHandler.getPathMovie());
                     movies movies = temp1.getMovies();
@@ -214,7 +213,40 @@ public class REQUESTclient extends ClientCommandsAbstract {
                 }
                 	break;
                 	
-                case "changeprice":
+                case "changeprice":{
+                	//does this user admin?
+                    dataBaseHandler.getReadWriteLockUsers().readLock().lock();
+                    UserJson temp2 = new UserJson(dataBaseHandler.getPathUsers());
+                    users currentUsers = temp2.getUsers();
+                    user currentUser = currentUsers.GetUser(ClieantName);
+                    if (currentUser.getType() != "admin") {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
+                    	break;
+                    }
+                    
+                	String movieName = this.getMovieName(this.Commands);
+                    dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
+                    MovieJson temp1 = new MovieJson(dataBaseHandler.getPathMovie());
+                    movies movies = temp1.getMovies();
+                    movie currMovie = movies.getMovie(movieName);
+                    String newPrice = this.getNewPrice(this.Commands);
+                    
+                    // does this movie exist? || the new price <= 0
+                    if (currMovie == null || newPrice == null || Integer.valueOf(newPrice) <= 0) {
+                    	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
+                    	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
+                        dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
+                    	break;
+                    }
+                    
+                    //change this movie price
+                    currMovie.setPrice(Integer.valueOf(newPrice));
+                    temp1.UpdateMovies(movies);
+                	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
+                    dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
+                	ans = "BR5"+currMovie.broadcastToString(); // for later handling and broadcsting    
+                }
                 	break;
                 default:
             	   ans = new ERRORmsg("request " + Commands[2] + " failed").getMsg();
@@ -226,7 +258,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
     }
     
     /**
-     * this method will get the rent request and return the name of the movie for the rent and return commands.
+     * this method will get the rent request and return the name of the movie for the rent,return and remmovie commands.
      * i.e: {XX,XX,"The,godfather"} and return a string <The godfather>.
      * @param array
      * @return the name of the requested movie
@@ -296,6 +328,18 @@ public class REQUESTclient extends ClientCommandsAbstract {
         	currName = "";
     	}
     	return command;
+    }
+    
+    public String getNewPrice(String[] command) {
+    	String ans ="";
+    	if (command.length < 4)
+    		return null;
+    	for (int i = 3; i< command.length; i++) {
+    		if (command[i].lastIndexOf('"')==command[i].length()-1) {
+    			ans = command[i+1];
+    		}
+    	}
+    	return ans;
     }
     /**
      * End of File.

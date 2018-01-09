@@ -123,6 +123,12 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             			this.connections.broadcast(new BROADCASTmsg("movie "+'"'+movieName+'"'+" removed").getMsg());
             			return null;
 					}
+					case "BR5":{ // changeprice command
+            			String movieName = ans.substring(ans.indexOf('"')+1,ans.indexOf('"', ans.indexOf('"')+1));
+            			this.connections.send(this.connectionId, new ACKmsg("changeprice "+ '"'+movieName+'"' +" success").getMsg());
+            			this.connections.broadcast(new BROADCASTmsg("movie "+ans.substring(3)).getMsg());
+            			return null;
+					}
 					default:
 						ans = new ERRORmsg("request "+ message[1] +" failed").getMsg();
 						break;
