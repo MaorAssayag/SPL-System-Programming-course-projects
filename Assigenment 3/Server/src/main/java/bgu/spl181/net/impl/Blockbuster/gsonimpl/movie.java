@@ -105,10 +105,12 @@ public class movie {
         String Countries = "";
         if(bannedCountries.length !=0){
             for (String name:bannedCountries) {
-                if(Countries.length() == 0)
-                    Countries = "'" +name+ "'";
-                else
-                    Countries = Countries + "," + "'" +name+ "'";
+            	if ( name!= null ) {
+                    if(Countries.length() == 0)
+                        Countries = "'" +name+ "'";
+                    else
+                        Countries = Countries + "," + "'" +name+ "'";
+            	}
             }
         }
         return name + "," + availableAmount + "," +price + "," + Countries ;
@@ -125,7 +127,7 @@ public class movie {
     public boolean doesThisCountryForbidden(String country) {
     	boolean ans = false;
     	for (String tempCountry : bannedCountries) {
-    		if (tempCountry.equals(country)) {
+    		if (tempCountry!= null && tempCountry.equals(country)) {
     			ans = true;
     			break;
     		}
