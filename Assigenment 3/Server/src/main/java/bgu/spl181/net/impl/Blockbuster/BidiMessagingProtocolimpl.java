@@ -89,6 +89,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             		if (ans.substring(0, 2).equals("ACK")) {
             			this.login.set(false);
             			ans = "disconnect"; // for the terminate process
+            			this.username="";//redundant
             		}
             	}
             	else
