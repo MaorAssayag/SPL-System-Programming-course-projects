@@ -42,13 +42,12 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     break;
 
                 case "info": {
-                    if (Commands.length == 2) {
+                    if (Commands.length == 2) { //get all the movies name as a string 
                         dataBaseHandler.getReadWriteLockMovie().readLock().lock();
                         MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
                         movies movies = temp.getMovies();
                         ans = new ACKmsg("info " + movies.toString()).getMsg();
-                        dataBaseHandler.getReadWriteLockMovie().readLock().unlock();
-                    } else{
+                    } else{ // get a specsific movie info string
                         dataBaseHandler.getReadWriteLockMovie().readLock().lock();
                         MovieJson temp = new MovieJson(dataBaseHandler.getPathMovie());
                         movies movies = temp.getMovies();
@@ -57,11 +56,12 @@ public class REQUESTclient extends ClientCommandsAbstract {
                         if(movie !=null) {
                             ans = movie.toString();
                             ans = new ACKmsg("info " + ans).getMsg();
-                            dataBaseHandler.getReadWriteLockMovie().readLock().unlock();
                         }
                         else
                             ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
                     }
+                    dataBaseHandler.getReadWriteLockMovie().readLock().unlock();
+
                 }
                     break;
 
