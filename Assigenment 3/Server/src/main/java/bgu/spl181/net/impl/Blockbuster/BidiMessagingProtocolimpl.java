@@ -50,7 +50,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
         this.connectionId = connectionId;
         this.connections = connections;
         shouldTerminate = false;
-        this.login.set(false);
+        this.login = new AtomicBoolean(false);
     }
 
     /**
