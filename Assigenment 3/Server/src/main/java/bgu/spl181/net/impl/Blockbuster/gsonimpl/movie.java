@@ -107,17 +107,17 @@ public class movie {
             for (String name:bannedCountries) {
             	if ( name!= null ) {
                     if(Countries.length() == 0)
-                        Countries = "'" +name+ "'";
+                        Countries = " "+'"' +name+ '"';
                     else
                         Countries = Countries + "," + "'" +name+ "'";
             	}
             }
         }
-        return name + "," + availableAmount + "," +price + "," + Countries ;
+        return broadcastToString() + Countries ;
     }
     
     public String broadcastToString() {
-    	return '"'+name+'"'+ " "+availableAmount + " " + price; //<"movie name"> < No. copies left > <price>
+    	return '"'+name+'"'+ " " +availableAmount + " " + price; //<"movie name"> < No. copies left > <price>
     }
     
     /**
