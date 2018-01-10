@@ -33,18 +33,8 @@
       <file leaf-file-name="REQUESTclient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movies.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="97" column="14" lean-forward="true" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+            <state relative-caret-position="410">
+              <caret line="62" column="24" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -98,12 +88,12 @@
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/BlockbusterServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/srv/ActorThreadPool.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/user.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/LineMessageEncoderDecoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/LOGINClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/BidiMessagingProtocolimpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/users.java" />
         <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java" />
       </list>
     </option>
   </component>
@@ -509,7 +499,7 @@
       <workItem from="1515236044325" duration="39108000" />
       <workItem from="1515438529143" duration="2943000" />
       <workItem from="1515510836259" duration="2666000" />
-      <workItem from="1515598424877" duration="10496000" />
+      <workItem from="1515598424877" duration="10816000" />
     </task>
     <servers />
   </component>
@@ -519,7 +509,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64667000" />
+    <option name="totallyTimeSpent" value="64987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -569,18 +559,6 @@
           <line>53</line>
           <properties />
           <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java</url>
-          <line>52</line>
-          <properties />
-          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="49" />
@@ -950,8 +928,8 @@
         <state relative-caret-position="154">
           <caret line="2139" column="19" lean-forward="false" selection-start-line="2139" selection-start-column="19" selection-end-line="2139" selection-end-column="19" />
           <folding>
-            <element signature="e#91867#91868#0" expanded="true" />
-            <element signature="e#91910#91911#0" expanded="true" />
+            <element signature="e#91867#91868#0" expanded="false" />
+            <element signature="e#91910#91911#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -998,16 +976,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/impl/Blockbuster/gsonimpl/movies.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="97" column="14" lean-forward="true" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="154">
+          <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding>
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1358#1359#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bgu/spl181/net/api/ClientCommands/REQUESTclient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+        <state relative-caret-position="410">
+          <caret line="62" column="24" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
           <folding />
         </state>
       </provider>
