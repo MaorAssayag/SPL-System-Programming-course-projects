@@ -35,7 +35,12 @@ public class UserJson {
         users users = null;
         try (Reader reader = new FileReader(Path)){
             users = gsonread.fromJson(reader,users.class);
-            users.updateusersJson();
+            if(users != null)
+                users.updateusersJson();
+            else{
+                users = new users();
+            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

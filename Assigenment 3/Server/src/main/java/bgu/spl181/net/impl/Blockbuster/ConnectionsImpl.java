@@ -19,8 +19,9 @@ public class ConnectionsImpl <T> implements Connections<T> {
 	 * @param connectionHandler
 	 * @return the new client ID.
 	 */
-	public int addConnection(ConnectionHandler<T> connectionHandler){  
-	   activeClients.put(counter++,connectionHandler);
+	public int addConnection(ConnectionHandler<T> connectionHandler){
+		counter++;
+	   activeClients.put(counter,connectionHandler);
 	   return counter;
     }
 	

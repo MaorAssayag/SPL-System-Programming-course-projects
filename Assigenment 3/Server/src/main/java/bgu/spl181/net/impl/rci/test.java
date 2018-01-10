@@ -26,7 +26,7 @@ public static void main(String[] args) throws JsonIOException, IOException {
 	// 1. Java object to JSON, and save into a file
 	try {
 		String json = gson.toJson(obj);
-		gson.toJson(json, new FileWriter("C:\\Users\\MaorA\\Desktop\\try.json"));
+		gson.toJson(json, new FileWriter("C:/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/test/users.json"));
 	} catch (Exception e) {
 		System.out.println("fail");	
 }

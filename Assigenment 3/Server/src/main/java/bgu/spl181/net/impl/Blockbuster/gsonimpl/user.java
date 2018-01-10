@@ -105,7 +105,7 @@ public class user {
      * @return the user password.
      */
     public Boolean PasswordCorrect(String password){
-        return (this.password == password);
+        return (this.password.equals(password));
     }
 
     /**

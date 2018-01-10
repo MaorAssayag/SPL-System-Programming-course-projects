@@ -62,6 +62,10 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
      */
     @Override
     public String process(String messagein) {
+		if(messagein.contains("\r")){
+			int i = messagein.indexOf("\r");
+			messagein = messagein.substring(0,i);
+		}
         String [] message = stringToArray(messagein);
         String ans = "";
         switch (message [0]){
@@ -75,7 +79,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             case "LOGIN":
             	if (!this.login.get()) {
             		ans = new LOGINClient(dataBaseHandler,message).execute();
-            		if (ans.substring(0, 2).equals("ACK")) {
+            		if (ans.contains("ACK")) {
             			this.login.set(true);
             			this.username = message[1];
             		}
@@ -87,7 +91,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             case "SIGNOUT":
             	if (this.login.get()) {
             		ans = new SIGNOUTClient(dataBaseHandler,message).execute();
-            		if (ans.substring(0, 2).equals("ACK")) {
+            		if (ans.contains("ACK")) {
             			this.login.set(false);
             			ans = "disconnect"; // for the terminate process
             			this.username="";//redundant
@@ -132,7 +136,8 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             			return null;
 					}
 					default:
-						ans = new ERRORmsg("request "+ message[1] +" failed").getMsg();
+						if(!ans.contains("ACK"))
+							ans = new ERRORmsg("request "+ message[1] +" failed").getMsg();
 						break;
 					}
             	}

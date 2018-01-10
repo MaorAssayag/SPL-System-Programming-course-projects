@@ -35,7 +35,10 @@ public class MovieJson {
         movies movies = null;
         try (Reader reader = new FileReader(this.path)){
             movies = gsonread.fromJson(reader,movies.class);
-            movies.updateMoviesJson();
+            if(movies != null)
+                movies.updateMoviesJson();
+            else
+                movies = new movies();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
