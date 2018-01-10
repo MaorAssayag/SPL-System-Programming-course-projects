@@ -135,9 +135,11 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             			this.connections.broadcast(new BROADCASTmsg("movie "+ans.substring(3)).getMsg());
             			return null;
 					}
+					case "ACK":{
+						break;
+					}
 					default:
-						if(!ans.contains("ACK"))
-							ans = new ERRORmsg("request "+ message[1] +" failed").getMsg();
+						ans = new ERRORmsg("request "+ message[1] +" failed").getMsg();
 						break;
 					}
             	}
