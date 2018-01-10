@@ -30,7 +30,7 @@ public class movies {
      * @return boolean if the movie was been added to the database.
      */
     public boolean AddMovie(movie Movie){
-        boolean ans = movieshash.contains(Movie);
+        boolean ans = movieshash.containsKey(Movie);
         if(!ans)
             Movie.setId(this.Ids++);
         this.movieshash.put(Movie.getName(),Movie);
@@ -106,9 +106,9 @@ public class movies {
         String ans = "";
         for (movie movie:getMovies()) {
             if(ans.length() == 0)
-                ans = movie.getName();
+                ans ='"'+ movie.getName()+'"';
             else
-                ans = ans + "," + movie.getName();
+                ans = ans + '"' +movie.getName()+'"';
         }
         return ans;
     }

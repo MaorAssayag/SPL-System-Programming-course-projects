@@ -27,7 +27,8 @@ public class users {
      * @return boolean if the user was been added to the database.
      */
     public boolean adduser(user user){
-        boolean exist = usersHash.contains(user.getUsername());
+        System.out.println(user.getUsername());
+        boolean exist = usersHash.containsKey(user.getUsername());
         if(!exist)
             usersHash.put(user.getUsername(),user);
         return !exist;
