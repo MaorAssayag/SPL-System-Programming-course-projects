@@ -26,7 +26,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                         String balance = "" + users.GetUser(ClieantName).getBalance();
                         ans = new ACKmsg("balance " + balance).getMsg();
                         dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
-                    } else if (Commands.length == 3 && Commands[2].equals("add") && Commands.length == 4) {
+                    } else if (Commands.length == 4 && Commands[2].equals("add")) {
                         dataBaseHandler.getReadWriteLockUsers().writeLock().lock();
                         UserJson temp = new UserJson(dataBaseHandler.getPathUsers());
                         users users = temp.getUsers();
@@ -148,7 +148,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     UserJson temp2 = new UserJson(dataBaseHandler.getPathUsers());
                     users currentUsers = temp2.getUsers();
                     user currentUser = currentUsers.GetUser(ClieantName);
-                    if (currentUser.getType() != "admin") {
+                    if (!currentUser.getType().equals("admin")) {
                     	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
                     	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
                     	break;
@@ -185,7 +185,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     UserJson temp2 = new UserJson(dataBaseHandler.getPathUsers());
                     users currentUsers = temp2.getUsers();
                     user currentUser = currentUsers.GetUser(ClieantName);
-                    if (currentUser.getType() != "admin") {
+                    if (!currentUser.getType().equals("admin")) {
                     	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
                     	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
                     	break;
@@ -220,7 +220,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     UserJson temp2 = new UserJson(dataBaseHandler.getPathUsers());
                     users currentUsers = temp2.getUsers();
                     user currentUser = currentUsers.GetUser(ClieantName);
-                    if (currentUser.getType() != "admin") {
+                    if (!currentUser.getType().equals("admin")) {
                     	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
                     	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
                     	break;

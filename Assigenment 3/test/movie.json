@@ -26,18 +26,6 @@
       "bannedCountries": [],
       "availableAmount": "0",
       "totalAmount": "1"
-    },
-    {
-      "id": "4",
-      "name": "Justice League",
-      "price": "17",
-      "bannedCountries": [
-        "jordan",
-        "iran",
-        "lebanon"
-      ],
-      "availableAmount": "4",
-      "totalAmount": "4"
     }
   ]
 }

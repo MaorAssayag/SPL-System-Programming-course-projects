@@ -150,6 +150,7 @@ public class BidiMessagingProtocolimpl implements BidiMessagingProtocol<String> 
             case "BROADCAST":{ // for broadcasting a message to all login users
             	if (this.login.get()) {
             		ans = messagein;
+            		break;
             	}
             }
             

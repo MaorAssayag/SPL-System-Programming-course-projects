@@ -66,7 +66,7 @@ public class user {
     public boolean ReturnMovie(String MovieName){
         boolean remove = false;
         for (UserMovie u:movies) {
-            if(u.getName() == MovieName){
+            if(u.getName().equals(MovieName)){
                 movies.remove(u);
                 remove = true;
                 break;
