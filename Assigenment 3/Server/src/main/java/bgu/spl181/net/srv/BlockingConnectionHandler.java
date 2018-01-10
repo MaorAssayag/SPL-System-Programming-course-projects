@@ -1,6 +1,5 @@
 package bgu.spl181.net.srv;
 
-import bgu.spl181.net.api.MessagingProtocol;
 import bgu.spl181.net.api.bidi.BidiMessagingProtocol;
 import bgu.spl181.net.api.bidi.MessageEncoderDecoder;
 
@@ -36,10 +35,6 @@ public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler
                 T nextMessage = encdec.decodeNextByte((byte) read);
                 if (nextMessage != null) {
                     T response = protocol.process(nextMessage);
-                    if (response != null) {
-                        out.write(encdec.encode(response));
-                        out.flush();
-                    }
                 }
             }
 
@@ -57,7 +52,24 @@ public class BlockingConnectionHandler<T> implements Runnable, ConnectionHandler
 
 	@Override
 	public void send(T msg) {
-		// TODO Auto-generated method stub
-		
+        if (msg != null) {
+            try {
+				out.write(encdec.encode(msg));
+				out.flush();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+        }
+        if (protocol.shouldTerminate())
+			try {
+				close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+	}
+
+	@Override
+	public BidiMessagingProtocol<T> getProtocol() {
+		return protocol;
 	}
 }
