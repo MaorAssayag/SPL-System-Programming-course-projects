@@ -1,0 +1,32 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "name": "The Pursuit Of Happyness",
+      "price": "14",
+      "bannedCountries": [],
+      "availableAmount": "3",
+      "totalAmount": "5"
+    },
+    {
+      "id": "2",
+      "name": "The Notebook",
+      "price": "17",
+      "bannedCountries": [],
+      "availableAmount": "0",
+      "totalAmount": "1"
+    },
+    {
+      "id": "3",
+      "name": "Justice League",
+      "price": "17",
+      "bannedCountries": [
+        "jordan",
+        "iran",
+        "lebanon"
+      ],
+      "availableAmount": "3",
+      "totalAmount": "4"
+    }
+  ]
+}

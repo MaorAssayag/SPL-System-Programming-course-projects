@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "username": "lisa",
+      "type": "normal",
+      "password": "chips123",
+      "country": "spain",
+      "movies": [
+        {
+          "id": "2",
+          "name": "The Pursuit Of Happyness"
+        },
+        {
+          "id": "3",
+          "name": "The Notebook"
+        }
+      ],
+      "balance": "37"
+    },
+    {
+      "username": "john",
+      "type": "admin",
+      "password": "potato",
+      "country": "united states",
+      "movies": [],
+      "balance": "0"
+    },
+    {
+      "username": "shlomi",
+      "type": "normal",
+      "password": "cocacola",
+      "country": "israel",
+      "movies": [
+        {
+          "id": "2",
+          "name": "The Pursuit Of Happyness"
+        },
+        {
+          "id": "4",
+          "name": "Justice League"
+        }
+      ],
+      "balance": "95"
+    }
+  ]
+}
