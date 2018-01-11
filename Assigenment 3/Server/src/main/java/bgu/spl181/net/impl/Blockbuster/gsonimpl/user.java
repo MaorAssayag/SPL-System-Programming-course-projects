@@ -128,7 +128,7 @@ public class user {
     public boolean isTheUserRentThisMovie(String movieName) {
     	boolean ans = false;
         for (UserMovie u:movies) {
-            if(u.getName() == movieName){
+            if(u.getName().equals(movieName)){
             	ans = true;
                 break;
             }

@@ -109,7 +109,7 @@ public class movie {
                     if(Countries.length() == 0)
                         Countries = " "+'"' +name+ '"';
                     else
-                        Countries = Countries + '"' +name+ '"';
+                        Countries = Countries + " " + '"' +name+ '"';
             	}
             }
         }

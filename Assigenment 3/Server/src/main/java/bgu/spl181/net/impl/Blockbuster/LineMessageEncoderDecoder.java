@@ -3,7 +3,7 @@ package bgu.spl181.net.impl.Blockbuster;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
-import bgu.spl181.net.api.bidi.MessageEncoderDecoder;
+import bgu.spl181.net.api.MessageEncoderDecoder;
 
 /**
  * This class is an implementation of MessageEncoderDecoder which allow to process 

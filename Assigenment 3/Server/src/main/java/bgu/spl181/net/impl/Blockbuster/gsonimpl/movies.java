@@ -108,7 +108,7 @@ public class movies {
             if(ans.length() == 0)
                 ans ='"'+ movie.getName()+'"';
             else
-                ans = ans + '"' +movie.getName()+'"';
+                ans = ans + " "+ '"' +movie.getName()+'"';
         }
         return ans;
     }

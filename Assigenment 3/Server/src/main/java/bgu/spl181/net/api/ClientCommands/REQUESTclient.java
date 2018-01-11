@@ -153,13 +153,11 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
                     	break;
                     }
-
                 	String[] movieData = this.getMovieData(this.Commands);
                 	String movieName = movieData[0];
                     dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
                     MovieJson temp1 = new MovieJson(dataBaseHandler.getPathMovie());
                     movies movies = temp1.getMovies();
-
                     // does this movie exist? || the movie price <= 0
                     if (movies.getMovie(movieName) != null || Integer.valueOf(movieData[2]) <= 0) {
                     	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
@@ -167,7 +165,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
                         dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
                     	break;
                     }
-
+                   
                     //add the movie
                     String[] bannedCountries = this.extractBannedcountry(this.Commands, movieData[3]);
                     movie currentMovie = new movie(movieName, movieData[2], bannedCountries, movieData[1]);
@@ -328,7 +326,7 @@ public class REQUESTclient extends ClientCommandsAbstract {
         	currentCountry++;
         	currName = "";
     	}
-    	return command;
+    	return answer;
     }
 
     public String getNewPrice(String[] command) {

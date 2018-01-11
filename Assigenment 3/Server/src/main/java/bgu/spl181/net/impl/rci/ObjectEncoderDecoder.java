@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.nio.ByteBuffer;
 
-import bgu.spl181.net.api.bidi.MessageEncoderDecoder;
+import bgu.spl181.net.api.MessageEncoderDecoder;
 
 public class ObjectEncoderDecoder implements MessageEncoderDecoder<Serializable> {
 
