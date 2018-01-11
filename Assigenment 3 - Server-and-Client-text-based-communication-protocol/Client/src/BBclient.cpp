@@ -23,6 +23,7 @@ void SocketRead::operator()() {
             break;
         }
 
+
         len=answer.length();
         // A C string must end with a 0 char delimiter.  When we filled the answer buffer from the socket
         // we filled up to the \n char - we must make sure now that a 0 char is also present. So we truncate last character.
@@ -30,7 +31,7 @@ void SocketRead::operator()() {
         std::cout << "Reply: " << answer << " " << len << " bytes " << std::endl << std::endl;
         if (answer == "ACK signout succeeded") {
             _connectionHandler.shutdownow();
-            std::cout << "Exiting...\n" << std::endl;
+            std::cout << "Ready to exit. Press enter\n" << std::endl;
             break;
         }
     }

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/ConnectionHandler.cpp" "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o"
-  "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/src/echoClient.cpp" "/cygdrive/c/Users/USER/Documents/GitHub/SPL-System-Programming-course-projects/SPL-System-Programming-course-projects/Assigenment 3/Client/cmake-build-debug/CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o"
+  "/cygdrive/c/Users/USER/Desktop/a/SPL-System-Programming-course-projects/Assigenment 3 - Server-and-Client-text-based-communication-protocol/Client/src/ConnectionHandler.cpp" "/cygdrive/c/Users/USER/Desktop/a/SPL-System-Programming-course-projects/Assigenment 3 - Server-and-Client-text-based-communication-protocol/Client/cmake-build-debug/CMakeFiles/Boost_Echo_Client.dir/src/ConnectionHandler.cpp.o"
+  "/cygdrive/c/Users/USER/Desktop/a/SPL-System-Programming-course-projects/Assigenment 3 - Server-and-Client-text-based-communication-protocol/Client/src/echoClient.cpp" "/cygdrive/c/Users/USER/Desktop/a/SPL-System-Programming-course-projects/Assigenment 3 - Server-and-Client-text-based-communication-protocol/Client/cmake-build-debug/CMakeFiles/Boost_Echo_Client.dir/src/echoClient.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
