@@ -10,12 +10,12 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class ReactorMain {
     public static void main(String[] args) {
         String path = System.getProperty("user.dir");
-        String userpath = path + "//Database//Users.json";
-        String moviespath = path + "//Database//Movies.json";
+        String userpath = path + System.getProperty("file.separator") + "Database" + System.getProperty("file.separator") + "Users.json";
+        String moviespath = path + System.getProperty("file.separator") + "Database" + System.getProperty("file.separator") + "Movies.json";
         DataBaseHandler dataBaseHandler = new DataBaseHandler(new ReentrantReadWriteLock()
                 ,new ReentrantReadWriteLock()
-                ,moviespath
-                ,userpath); //one shared object
+                ,userpath
+                ,moviespath); //one shared object
 
         Server.reactor(
                 Runtime.getRuntime().availableProcessors(),

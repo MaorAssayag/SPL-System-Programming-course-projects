@@ -39,11 +39,10 @@ public class MovieJson {
                 movies.updateMoviesJson();
             else
                 movies = new movies();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
+        
         return movies;
     }
 
@@ -55,7 +54,7 @@ public class MovieJson {
         try (Writer writer = new FileWriter(this.path)){
             movies.makemoviesarrayforjson();
             gsonwrite.toJson(movies, writer);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

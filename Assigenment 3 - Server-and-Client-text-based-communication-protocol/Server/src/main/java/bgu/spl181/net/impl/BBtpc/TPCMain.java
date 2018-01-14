@@ -10,12 +10,12 @@ import bgu.spl181.net.srv.Server;
 public class TPCMain {
     public static void main(String[] args) {
         String path = System.getProperty("user.dir");
-        String userpath = path + "//Database//Users.json";
-        String moviespath = path + "//Database//Movies.json";
+        String userpath = path + System.getProperty("file.separator") + "Database" + System.getProperty("file.separator") + "Users.json";
+        String moviespath = path + System.getProperty("file.separator") + "Database" + System.getProperty("file.separator") + "Movies.json";
         DataBaseHandler dataBaseHandler = new DataBaseHandler(new ReentrantReadWriteLock()
                 ,new ReentrantReadWriteLock()
-                ,moviespath
-                ,userpath); //one shared object
+                ,userpath
+                ,moviespath); //one shared object
 
         Server.threadPerClient(
         		Integer.parseInt(args[0]), //port

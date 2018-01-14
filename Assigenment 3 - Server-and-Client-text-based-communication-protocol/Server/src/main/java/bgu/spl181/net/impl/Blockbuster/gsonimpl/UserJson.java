@@ -41,9 +41,7 @@ public class UserJson {
                 users = new users();
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return users;
@@ -57,7 +55,7 @@ public class UserJson {
         try (Writer writer = new FileWriter(Path)){
             users.makeusersarrayforjson();
             gsonwrite.toJson(users, writer);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
