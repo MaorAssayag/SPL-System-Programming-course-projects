@@ -158,8 +158,8 @@ public class REQUESTclient extends ClientCommandsAbstract {
                     dataBaseHandler.getReadWriteLockMovie().writeLock().lock();
                     MovieJson temp1 = new MovieJson(dataBaseHandler.getPathMovie());
                     movies movies = temp1.getMovies();
-                    // does this movie exist? || the movie price <= 0
-                    if (movies.getMovie(movieName) != null || Integer.valueOf(movieData[2]) <= 0) {
+                    // does this movie exist? || the movie price <= 0 || the movie amount <=0
+                    if (movies.getMovie(movieName) != null || Integer.valueOf(movieData[2]) <= 0 || Integer.valueOf(movieData[1]) <= 0) {
                     	ans = new ERRORmsg("request " + Commands[1] + " failed").getMsg();
                     	dataBaseHandler.getReadWriteLockUsers().readLock().unlock();
                         dataBaseHandler.getReadWriteLockMovie().writeLock().unlock();
