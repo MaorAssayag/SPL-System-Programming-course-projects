@@ -51,7 +51,7 @@ public class REGISTERClient extends ClientCommandsAbstract {
         String balance ="0";
         //check the optional data block
         if(Commands.length >= 4 && Commands[3].contains("country"))
-            country = Commands[3].substring(Commands[3].indexOf('"')+1,Commands[3].lastIndexOf('"'));
+            country = getCountryName(Commands);
         else 
         	return (new ERRORmsg("registration failed")).getMsg();
         
@@ -73,6 +73,17 @@ public class REGISTERClient extends ClientCommandsAbstract {
         else
             return (new ERRORmsg("registration failed")).getMsg();
    }
+    
+    public String getCountryName(String[] array) {
+    	String ans = "";
+    	ans = array[3].substring(array[3].indexOf('"'));
+    	for(int i = 4; i < array.length; i++) {
+    		ans +=" " + array[i];
+    	}
+    	ans = ans.substring(ans.indexOf('"')+1, ans.indexOf('"', ans.indexOf('"')+1));
+		return ans;
+    }
+
     
     /**
      * End Of File.
