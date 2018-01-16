@@ -50,8 +50,13 @@ public class REGISTERClient extends ClientCommandsAbstract {
         String country = "";
         String balance ="0";
         //check the optional data block
-        if(Commands.length >= 4 && Commands[3].contains("country"))
-            country = getCountryName(Commands);
+        if(Commands.length >= 4 && Commands[3].contains("country")) {
+        	try {
+        		country = getCountryName(Commands);
+			} catch (Exception e) {
+				return (new ERRORmsg("registration failed")).getMsg();
+			}
+        }
         else 
         	return (new ERRORmsg("registration failed")).getMsg();
         
