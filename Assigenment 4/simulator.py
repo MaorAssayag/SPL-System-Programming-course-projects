@@ -8,7 +8,8 @@ tasknotempty = True
 while tasknotempty and os.path.isfile('world.db') :
     cursor.execute("SELECT * FROM tasks");
     taskslist = cursor.fetchall()
-    stringworkerlist = ""*len(cursor.execute("SELECT * FROM workers"))
+    workeslist = cursor.execute("SELECT * FROM workers")
+    stringworkerlist = ""*len(workeslist)
     tasknotempty = False
     for task in taskslist:
         tasknotempty = True

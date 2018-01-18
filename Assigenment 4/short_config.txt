@@ -1,0 +1,6 @@
+wood,50
+metal,250
+worker,1,Alice
+worker,2,Bob
+assembling wagons,1,wood,10,2
+researching nukes,2,metal,100,5

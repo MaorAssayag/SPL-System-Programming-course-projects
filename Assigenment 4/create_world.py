@@ -2,7 +2,6 @@ import sqlite3
 
 import os
 
-
 databaseexisted = os.path.isfile('world.db')
 if not databaseexisted:
     dbcon = sqlite3.connect('world.db')
