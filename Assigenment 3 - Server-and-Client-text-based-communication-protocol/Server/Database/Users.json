@@ -1,6 +1,22 @@
 {
   "users": [
     {
+      "username": "maor",
+      "type": "normal",
+      "password": "password",
+      "country": "israel",
+      "movies": [],
+      "balance": "0"
+    },
+    {
+      "username": "maor2",
+      "type": "normal",
+      "password": "maor2",
+      "country": "new ziland",
+      "movies": [],
+      "balance": "0"
+    },
+    {
       "username": "lisa",
       "type": "normal",
       "password": "chips123",
@@ -22,6 +38,14 @@
       "type": "admin",
       "password": "potato",
       "country": "united states",
+      "movies": [],
+      "balance": "0"
+    },
+    {
+      "username": "refahel",
+      "type": "normal",
+      "password": "password1",
+      "country": "new ziland bai ta",
       "movies": [],
       "balance": "0"
     },

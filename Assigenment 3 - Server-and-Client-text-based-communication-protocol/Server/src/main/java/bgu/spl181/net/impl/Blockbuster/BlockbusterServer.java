@@ -9,8 +9,8 @@ public class BlockbusterServer {
 
         DataBaseHandler dataBaseHandler = new DataBaseHandler(new ReentrantReadWriteLock()
                 ,new ReentrantReadWriteLock(),
-        "C:\\Users\\MaorA\\Desktop\\spl\\SPL-System-Programming-course-projects\\Assigenment 3\\Server\\Database\\Users.json"
-        ,"C:\\Users\\MaorA\\Desktop\\spl\\SPL-System-Programming-course-projects\\Assigenment 3\\Server\\Database\\Movies.json"); //one shared object
+        "C:\\Users\\MaorA\\Desktop\\spl\\SPL-System-Programming-course-projects\\Assigenment 3 - Server-and-Client-text-based-communication-protocol\\Server\\Database\\Users.json"
+        ,"C:\\Users\\MaorA\\Desktop\\spl\\SPL-System-Programming-course-projects\\Assigenment 3 - Server-and-Client-text-based-communication-protocol\\Server\\Database\\Movies.json"); //one shared object
 
 // you can use any server...
         Server.threadPerClient(

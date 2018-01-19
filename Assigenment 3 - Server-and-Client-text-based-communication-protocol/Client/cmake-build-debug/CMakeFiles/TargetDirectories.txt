@@ -1,3 +1,0 @@
-/cygdrive/c/Users/USER/Desktop/a/SPL-System-Programming-course-projects/Assigenment 3 - Server-and-Client-text-based-communication-protocol/Client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/USER/Desktop/a/SPL-System-Programming-course-projects/Assigenment 3 - Server-and-Client-text-based-communication-protocol/Client/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/Users/USER/Desktop/a/SPL-System-Programming-course-projects/Assigenment 3 - Server-and-Client-text-based-communication-protocol/Client/cmake-build-debug/CMakeFiles/Boost_Echo_Client.dir
