@@ -2,6 +2,8 @@ import sqlite3
 
 import os
 
+import sys
+
 databaseexisted = os.path.isfile('world.db')
 if not databaseexisted:
     dbcon = sqlite3.connect('world.db')
@@ -13,4 +15,29 @@ if not databaseexisted:
         cursor.execute(
             "CREATE TABLE resources(name TEXT PRIMARY KEY,amount INTEGER NOT NULL)")  # create table resources
 
+    config_file  = open(sys.argv[1] + ".txt")
 
+    numberoftasks = 1
+    for line in config_file:
+        line = line.replace('\n','')
+        config_line = line.split(",")
+        if len(config_line) == 2:
+            resourcename = config_line[0]
+            amount = int(config_line[1])
+            cursor.execute("INSERT INTO resources VALUES(?,?)", (resourcename, amount));
+        elif len(config_line) == 3:
+            workername = config_line[2]
+            workerid = int(config_line[1])
+            cursor.execute("INSERT INTO workers VALUES(?,?,?)", (workerid, workername ,'idle'));
+        elif len(config_line) == 5:
+            taskname = config_line[0]
+            workerid = config_line[1]
+            resourcename = config_line[2]
+            resourceamount = config_line[3]
+            time = config_line[4]
+            cursor.execute("INSERT INTO tasks VALUES(?,?,?,?,?,?)", (numberoftasks, taskname, workerid ,time,resourcename,resourceamount));
+            numberoftasks = numberoftasks + 1
+
+    dbcon.commit()
+else:
+    print("Error the world as already exist")

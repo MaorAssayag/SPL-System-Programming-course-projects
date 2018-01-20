@@ -10,57 +10,58 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Assigenment_4$simulator.coverage" NAME="simulator Coverage Results" MODIFIED="1516305457421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Assigenment_4$create_world.coverage" NAME="create_world Coverage Results" MODIFIED="1516305506570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Assigenment_4$simulator.coverage" NAME="simulator Coverage Results" MODIFIED="1516443133108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Assigenment_4$create_world.coverage" NAME="create_world Coverage Results" MODIFIED="1516374114136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="create_world.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_world.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="404">
+              <caret line="42" column="43" lean-forward="false" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1516305368389" expanded="true" signature="208:406" ph="CREATE TABLE... tasks" />
-                <marker date="1516305368389" expanded="true" signature="467:551" ph="CREATE TABLE... workers" />
-                <marker date="1516305368389" expanded="true" signature="615:684" ph="CREATE TABLE... resources" />
+                <marker date="1516442373754" expanded="true" signature="220:418" ph="CREATE TABLE... tasks" />
+                <marker date="1516442373754" expanded="true" signature="479:563" ph="CREATE TABLE... workers" />
+                <marker date="1516442373754" expanded="true" signature="627:696" ph="CREATE TABLE... resources" />
+                <marker date="1516442373754" expanded="true" signature="1044:1077" ph="INSERT INTO resources... " />
+                <marker date="1516442373754" expanded="true" signature="1252:1285" ph="INSERT INTO workers... " />
+                <marker date="1516442373754" expanded="true" signature="1581:1618" ph="INSERT INTO tasks... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simulator.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="simulator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            <state relative-caret-position="368">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1516305457389" expanded="true" signature="179:198" ph="SELECT * FRO... Students" />
-                <marker date="1516305457389" expanded="true" signature="269:290" ph="SELECT * FRO... workers" />
-                <marker date="1516305457389" expanded="true" signature="439:476" ph="SELECT name workers" />
-                <marker date="1516305457389" expanded="true" signature="756:779" ph="DELETE FROM table... " />
-                <marker date="1516305457389" expanded="true" signature="756:787" ph="DELETE FROM tasks... " />
-                <marker date="1516305457389" expanded="true" signature="828:855" ph="UPDATE workers... " />
-                <marker date="1516305457389" expanded="true" signature="828:867" ph="UPDATE workers... " />
-                <marker date="1516305457389" expanded="true" signature="828:875" ph="UPDATE workers... " />
-                <marker date="1516305457389" expanded="true" signature="938:997" ph="UPDATE tasks... " />
-                <marker date="1516305457389" expanded="true" signature="938:1005" ph="UPDATE tasks... " />
-                <marker date="1516305457389" expanded="true" signature="938:1007" ph="UPDATE tasks... " />
-                <marker date="1516305457389" expanded="true" signature="1276:1303" ph="UPDATE workers... " />
-                <marker date="1516305457389" expanded="true" signature="1276:1308" ph="UPDATE workers... " />
-                <marker date="1516305457389" expanded="true" signature="1276:1323" ph="UPDATE workers... " />
+                <marker date="1516443133082" expanded="true" signature="209:231" ph="SELECT id FR... workers" />
+                <marker date="1516443133082" expanded="true" signature="451:618" ph="SELECT * FRO... tasks" />
+                <marker date="1516443133082" expanded="true" signature="856:902" ph="UPDATE resources... " />
+                <marker date="1516443133082" expanded="true" signature="964:1006" ph="UPDATE workers... " />
+                <marker date="1516443133082" expanded="true" signature="1499:1529" ph="DELETE FROM tasks... " />
+                <marker date="1516443133082" expanded="true" signature="1608:1654" ph="UPDATE tasks... " />
+                <marker date="1516443133082" expanded="true" signature="1917:1959" ph="UPDATE workers... " />
+                <marker date="1516443133082" expanded="true" signature="2027:2046" ph="SELECT * FRO... Students" />
+                <marker date="1516443133082" expanded="true" signature="2092:2113" ph="SELECT * FRO... workers" />
+                <marker date="1516443133082" expanded="true" signature="2665:2686" ph="SELECT * FRO... workers" />
+                <marker date="1516443133082" expanded="true" signature="2665:2687" ph="SELECT name workers" />
+                <marker date="1516443133082" expanded="true" signature="2665:2699" ph="SELECT * FRO... workers" />
+                <marker date="1516443133082" expanded="true" signature="3021:3067" ph="UPDATE tasks... " />
+                <marker date="1516443133082" expanded="true" signature="3286:3329" ph="SELECT amoun... resources" />
+                <marker date="1516443133082" expanded="true" signature="3494:3515" ph="UPDATE workers... " />
+                <marker date="1516443133082" expanded="true" signature="3494:3538" ph="UPDATE workers... " />
+                <marker date="1516443133082" expanded="true" signature="3494:3539" ph="UPDATE resources... " />
+                <marker date="1516443133082" expanded="true" signature="3494:3540" ph="UPDATE resources... " />
+                <marker date="1516443133082" expanded="true" signature="3494:3573" ph="UPDATE resources... " />
+                <marker date="1516443133082" expanded="true" signature="3606:3648" ph="UPDATE workers... " />
+                <marker date="1516443133082" expanded="true" signature="4327:4369" ph="UPDATE workers... " />
+                <marker date="1516443133082" expanded="true" signature="4463:4493" ph="DELETE FROM tasks... " />
               </folding>
             </state>
           </provider>
@@ -75,13 +76,18 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>SELECT</find>
+    </findStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/create_world.py" />
-        <option value="$PROJECT_DIR$/simulator.py" />
         <option value="$PROJECT_DIR$/venv/test.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/create_world.py" />
+        <option value="$PROJECT_DIR$/simulator.py" />
       </list>
     </option>
   </component>
@@ -152,7 +158,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.create_world">
+  <component name="RunManager" selected="Python.simulator">
     <configuration name="create_world" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -197,8 +203,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.create_world" />
-        <item index="1" class="java.lang.String" itemvalue="Python.simulator" />
+        <item index="0" class="java.lang.String" itemvalue="Python.simulator" />
+        <item index="1" class="java.lang.String" itemvalue="Python.create_world" />
       </list>
     </recent_temporary>
   </component>
@@ -220,11 +226,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -235,7 +240,7 @@
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39909297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29818594" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -254,53 +259,84 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/simulator.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/simulator.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/simulator.py">
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-1480570077/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1516305457389" expanded="true" signature="179:198" ph="SELECT * FRO... Students" />
-            <marker date="1516305457389" expanded="true" signature="269:290" ph="SELECT * FRO... workers" />
-            <marker date="1516305457389" expanded="true" signature="439:476" ph="SELECT name workers" />
-            <marker date="1516305457389" expanded="true" signature="756:779" ph="DELETE FROM table... " />
-            <marker date="1516305457389" expanded="true" signature="756:787" ph="DELETE FROM tasks... " />
-            <marker date="1516305457389" expanded="true" signature="828:855" ph="UPDATE workers... " />
-            <marker date="1516305457389" expanded="true" signature="828:867" ph="UPDATE workers... " />
-            <marker date="1516305457389" expanded="true" signature="828:875" ph="UPDATE workers... " />
-            <marker date="1516305457389" expanded="true" signature="938:997" ph="UPDATE tasks... " />
-            <marker date="1516305457389" expanded="true" signature="938:1005" ph="UPDATE tasks... " />
-            <marker date="1516305457389" expanded="true" signature="938:1007" ph="UPDATE tasks... " />
-            <marker date="1516305457389" expanded="true" signature="1276:1303" ph="UPDATE workers... " />
-            <marker date="1516305457389" expanded="true" signature="1276:1308" ph="UPDATE workers... " />
-            <marker date="1516305457389" expanded="true" signature="1276:1323" ph="UPDATE workers... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create_world.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1516305368389" expanded="true" signature="208:406" ph="CREATE TABLE... tasks" />
-            <marker date="1516305368389" expanded="true" signature="467:551" ph="CREATE TABLE... workers" />
-            <marker date="1516305368389" expanded="true" signature="615:684" ph="CREATE TABLE... resources" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="339" column="4" lean-forward="false" selection-start-line="339" selection-start-column="4" selection-end-line="339" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="100">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_world.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="42" column="43" lean-forward="false" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1516442373754" expanded="true" signature="220:418" ph="CREATE TABLE... tasks" />
+            <marker date="1516442373754" expanded="true" signature="479:563" ph="CREATE TABLE... workers" />
+            <marker date="1516442373754" expanded="true" signature="627:696" ph="CREATE TABLE... resources" />
+            <marker date="1516442373754" expanded="true" signature="1044:1077" ph="INSERT INTO resources... " />
+            <marker date="1516442373754" expanded="true" signature="1252:1285" ph="INSERT INTO workers... " />
+            <marker date="1516442373754" expanded="true" signature="1581:1618" ph="INSERT INTO tasks... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1516443133082" expanded="true" signature="209:231" ph="SELECT id FR... workers" />
+            <marker date="1516443133082" expanded="true" signature="451:618" ph="SELECT * FRO... tasks" />
+            <marker date="1516443133082" expanded="true" signature="856:902" ph="UPDATE resources... " />
+            <marker date="1516443133082" expanded="true" signature="964:1006" ph="UPDATE workers... " />
+            <marker date="1516443133082" expanded="true" signature="1499:1529" ph="DELETE FROM tasks... " />
+            <marker date="1516443133082" expanded="true" signature="1608:1654" ph="UPDATE tasks... " />
+            <marker date="1516443133082" expanded="true" signature="1917:1959" ph="UPDATE workers... " />
+            <marker date="1516443133082" expanded="true" signature="2027:2046" ph="SELECT * FRO... Students" />
+            <marker date="1516443133082" expanded="true" signature="2092:2113" ph="SELECT * FRO... workers" />
+            <marker date="1516443133082" expanded="true" signature="2665:2686" ph="SELECT * FRO... workers" />
+            <marker date="1516443133082" expanded="true" signature="2665:2687" ph="SELECT name workers" />
+            <marker date="1516443133082" expanded="true" signature="2665:2699" ph="SELECT * FRO... workers" />
+            <marker date="1516443133082" expanded="true" signature="3021:3067" ph="UPDATE tasks... " />
+            <marker date="1516443133082" expanded="true" signature="3286:3329" ph="SELECT amoun... resources" />
+            <marker date="1516443133082" expanded="true" signature="3494:3515" ph="UPDATE workers... " />
+            <marker date="1516443133082" expanded="true" signature="3494:3538" ph="UPDATE workers... " />
+            <marker date="1516443133082" expanded="true" signature="3494:3539" ph="UPDATE resources... " />
+            <marker date="1516443133082" expanded="true" signature="3494:3540" ph="UPDATE resources... " />
+            <marker date="1516443133082" expanded="true" signature="3494:3573" ph="UPDATE resources... " />
+            <marker date="1516443133082" expanded="true" signature="3606:3648" ph="UPDATE workers... " />
+            <marker date="1516443133082" expanded="true" signature="4327:4369" ph="UPDATE workers... " />
+            <marker date="1516443133082" expanded="true" signature="4463:4493" ph="DELETE FROM tasks... " />
+          </folding>
         </state>
       </provider>
     </entry>
