@@ -15,7 +15,7 @@ if not databaseexisted:
         cursor.execute(
             "CREATE TABLE resources(name TEXT PRIMARY KEY,amount INTEGER NOT NULL)")  # create table resources
 
-    config_file  = open(sys.argv[1] + ".txt")
+    config_file  = open(sys.argv[1])
 
     numberoftasks = 1
     for line in config_file:
